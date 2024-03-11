@@ -11,17 +11,9 @@ public class Main {
         a = 10;
         b = 0;
 
-        System.out.println(a==10);
-
-        System.out.println(a+b==10);
-
-
-
-
-
-
-
-
+        if(a==10||(a+b)==10) {
+            System.out.println(a==10||a+b==10);
+        }
 
 
 
