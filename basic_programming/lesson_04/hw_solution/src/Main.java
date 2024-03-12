@@ -10,7 +10,7 @@ public class Main {
         int a = 10;
         int b = 0;
 
-        if (a == 10 || b == 0 || a + b == 10)
-            System.out.println("true");
+       boolean result = (a == 10 || b == 0 || a + b == 10);
+            System.out.println(result);
     }
 }
