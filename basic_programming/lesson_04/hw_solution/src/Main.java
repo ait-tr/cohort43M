@@ -8,8 +8,12 @@ public class Main {
          */
         int a = 7;
         int b = 3;
-        boolean result;
-        result = a != b;
+        boolean result =  a != b || a > b;
         System.out.println(result);
+
+        int s = 10;
+        int r = 4;
+        boolean res = s != r || s > r || r < s;
+        System.out.println(res);
     }
 }
