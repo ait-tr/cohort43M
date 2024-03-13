@@ -8,7 +8,7 @@ public class AsciiClass {
         Пример: 'А' результат - 65
          */
         Character ch = 'A';
-        var chAscii = (long) ch;
+        var chAscii = (int) ch;
         System.out.println(chAscii);
     }
 }
