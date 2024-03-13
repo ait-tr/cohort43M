@@ -1,13 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        int firstNumber = 2;
-        int secondNumber = 2;
-        int sum = firstNumber + secondNumber;
+        int num1 = 5;
+        int num2 = 7;
+        int num3 = 5;
 
-        if (firstNumber == secondNumber) {
-            sum *= 2;
+        if (num1 == num2 && num2 == num3) {
+            System.out.println("All numbers are equal.");
+        } else if (num1 != num2 && num2 != num3 && num1 != num3) {
+            System.out.println("All numbers are different.");
+        } else {
+            System.out.println("Some numbers are equal.");
         }
-
-        System.out.println("Sum of the numbers: " + sum);
     }
 }
