@@ -13,11 +13,7 @@ Task 2
 Написать программу, выводящую на экран ASCII значение символа.
 Пример: 'А' результат - 65
         */
-        byte b1;
-        char ch;
-
-       b1 = 65; // ASCII for A
-        ch =(char) b1;
-        System.out.println("ch = " + ch);
+        int intCh = 'A';
+        System.out.println(intCh);
     }
 }
