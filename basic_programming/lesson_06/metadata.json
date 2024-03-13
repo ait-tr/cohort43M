@@ -1,0 +1,13 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/main6/src/GuessNumber.java",
+    "code/main6/src/Main.java",
+    "code/main6/src/Practice.java",
+    "code/main6/src/TruthTable.java"
+
+  ],
+  "video": ""
+}
