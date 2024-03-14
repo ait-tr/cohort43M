@@ -18,7 +18,7 @@ public class HW2403141 {
 
         // Задача 2
         System.out.println("Enter temperature in degrees Fahrenheit");
-            int F = scanner.nextInt();
+            double F = scanner.nextDouble();
 
         System.out.println("Temperature " + F + "F = " + convertFtoC(F) + "C");
         System.out.println("------end of convertFtoC------\n");
@@ -43,8 +43,8 @@ public static int calculateSum (int a, int b){
 Метод должен возвращать полученное значение в основную программу.
 Затем, в методе main вывести полученное значение на экран.
  */
-    public static int convertFtoC (int F) {
-        int tempC = 5 * (F - 32) / 9;
+    public static double convertFtoC (double F) {
+        double tempC = 5 * (F - 32) / 9;
         return tempC;
     }
 }
