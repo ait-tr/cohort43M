@@ -1,10 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        double celsius = 25.0;
-        double fahrenheit = convertToFahrenheit(celsius);
-        System.out.printf("Температура %.2f градусов Цельсия равна %.2f градусов Фаренгейта%n", celsius, fahrenheit);
+        int num1 = 10;
+        int num2 = 20;
+        int result = sum(num1, num2);
+        System.out.println("Сумма чисел " + num1 + " и " + num2 + " равна " + result);
     }
-    public static double convertToFahrenheit(double celsius) {
-        return (9.0 / 5.0) * celsius + 32.0;
+    public static int sum(int a, int b) {
+        return a + b;
     }
 }
