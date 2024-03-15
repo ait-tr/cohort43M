@@ -8,18 +8,24 @@
 
 public class Task_2 {
     public static void main(String[] args) {
-        double result;
-    result = calculateTemp(70);
-    System.out.println(result);
+        double tempF = 451.0;
+        double result = convertToCelsius1(tempF);
+        Math.round(result);
+
+    System.out.println(tempF + "F -> " + Math.round(convertToCelsius(tempF)) + "C");
     }
 
-    public static double calculateTemp(double tempF) {
+    public static double convertToCelsius(double tempF) {
 
-        double tempC = 5*(tempF - 32)/9;
+        double tempC = 5 * (tempF - 32.0)/9.0;
 
         return tempC;
-
-
-
     }
+
+    public static double convertToCelsius1(double tempF) {
+
+        return 5 * (tempF - 32.0)/9.0;
+    }
+
+
 }

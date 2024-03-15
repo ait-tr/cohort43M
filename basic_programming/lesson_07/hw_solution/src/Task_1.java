@@ -8,12 +8,12 @@
 public class Task_1 {
     public static void main(String[] args) {
 
-       int res = sum(2, 5);
-       System.out.println( res );
+       int result = sum(2, 5);
+       System.out.println( "Result " + result );
     }
     public static int sum(int a, int b) {
 
-        int result = a + b;
-        return result;
+        int x = a + b;
+        return x;
     }
 }
