@@ -36,6 +36,9 @@ public class Practice {
             case "/":
                 System.out.println(num1 + " " +sing + " " + num2 + " = " + (num1 / num2) );
                 break;
+
+            default:
+                System.out.println("It's wrong. Try another symbol");
         }
 
     }

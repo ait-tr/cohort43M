@@ -44,6 +44,9 @@ public class daysOfTheWeek {
            case 7:
                System.out.println("Sunday");
                break;
+
+           default:
+               System.out.println("It's too big! Try again)");
        }
 
    }
