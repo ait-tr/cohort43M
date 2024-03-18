@@ -1,41 +1,37 @@
 import java.util.Scanner;
 
 public class Main {
-    //Используя switch, написать программу, которая в зависимости от ввода
-    // пользователем цифр от 1 до 7 выводит на экран название соответствующего
-    // дня недели.
     public static void main(String[] args) {
+        double num1, num2;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number from 1 to 7: ");
-        int num = scanner.nextInt();
-        switch (num) {
-            case 1:
-                System.out.println("Monday");
+        System.out.println("Enter a first number:");
+        num1 = scanner.nextDouble();
+        System.out.println("Enter a second number:");
+        num2 = scanner.nextDouble();
+        String trash = scanner.nextLine();
+        System.out.println("Enter a sign (+, -, *, / ):");
+        String sign = scanner.nextLine();
+        switch(sign){
+            case "+":
+                System.out.println(num1 + " " + sign + " " + num2 + " = " + (num1 + num2));
                 break;
-            case 2:
-                System.out.println("Tuesday");
+            case "-":
+                System.out.println(num1 + " " + sign + " " + num2 + " = " + (num1 - num2));
                 break;
-            case 3:
-                System.out.println("Wednesday");
+            case "*":
+                System.out.println(num1 + " " + sign + " " + num2 + " = " + (num1 * num2));
                 break;
-            case 4:
-                System.out.println("Thursday");
-                break;
-            case 5:
-                System.out.println("Friday");
-                break;
-            case 6:
-                System.out.println("Saturday");
-                break;
-            case 7:
-                System.out.println("Sunday");
+            case "/":
+                if (num2 != 0) {
+                System.out.println(num1 + " " + sign + " " + num2 + " = " +(num1 / num2));}
+                else { System.out.print (" it's not allowed to divide to 0 ");}
                 break;
             default:
-                System.out.println("Wrong number");
+                System.out.println("Wrong sign. Please enter a sign (+, -, *, / )");
+
+
+
         }
     }
+
 }
-
-
-
-
