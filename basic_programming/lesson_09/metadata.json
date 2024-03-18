@@ -1,0 +1,12 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/main9/src/DoWhileLoop.java",
+    "code/main9/src/GuessNumber.java",
+    "code/main9/src/Main.java"
+
+  ],
+  "video": ""
+}
