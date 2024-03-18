@@ -15,8 +15,9 @@ public class Main {
         int a = 1;
 
         while (a <= n){
-            System.out.println(a + " cubed is " + (a*a));
-            a++;}
+            System.out.println(a + " cubed is " + (a*a*a));
+            a++;
+        }
     }
     /*
     С помощью цикла while написать метод, выводящий на печать результат умножения данного
