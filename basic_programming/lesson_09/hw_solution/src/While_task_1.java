@@ -1,23 +1,20 @@
 public class While_task_1 {
 
     public static void main(String[] args) {
-    printCub();
-    System.out.println(printCub());
+    printCube(5);
+
         }
 
 
-    public static int printCub(){
+    public static void printCube(int n){
 
-        int cub = 0;
+        int i = 1;
 
-        int n = 1;
-
-        while ( n <= 3) {
-            cub = n * n * n;
-            n++;
+        while ( i <= n) {
+       System.out.println("The number is " + i + " and cube of " + i + " is " + (i * i * i));
+            i++;
         }
-    System.out.println(cub);
-        return cub;
+
     }
 
 }

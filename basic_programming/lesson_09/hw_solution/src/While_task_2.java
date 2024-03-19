@@ -1,20 +1,18 @@
 public class While_task_2 {
     public static void main(String[] args) {
 
-        System.out.println("Myltiply of 0 to n is " + printMultiply());
+        printMultiply(99);
     }
 
-    public static int printMultiply() {
+    public static void printMultiply(int n) {
 
-        int multiply = 1;
+        int i = 0;
 
-        char i = 'n';
-
-        while (i <= 'n'){
-           multiply = multiply * i;
+        while (i <= n){
+         System.out.println(n + " * " + i + " = " + n * i);
            i++;
         }
-        return multiply;
+
         }
 
     }
