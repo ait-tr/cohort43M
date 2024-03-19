@@ -1,0 +1,14 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/main10/src/ContinueBreak.java",
+    "code/main10/src/Homework.java",
+    "code/main10/src/Main.java",
+    "code/main10/src/NestedLoop.java",
+    "code/main10/src/Practice.java"
+
+  ],
+  "video": ""
+}
