@@ -25,7 +25,7 @@ public class Main {
     Дан массив целых чисел. Написать метод, возвращающий наименьший элемент массива.
     public static int findMin(int[] ints)
      */
-    public static void findMin(int[] ints) {
+    public static int findMin(int[] ints) {
         int min = ints[0];
 
         for (int i = 0; i < ints.length; i++) {
@@ -34,5 +34,6 @@ public class Main {
             }
         }
         System.out.println(min);
+        return min;
     }
 }
