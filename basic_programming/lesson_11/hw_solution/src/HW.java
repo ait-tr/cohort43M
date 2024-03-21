@@ -30,15 +30,14 @@ public static int findMin(int[] ints)
          */
 
         System.out.println("Print min");
-        int[] ints = {3, 35, 6, 2, 46};
-        findMin(ints);
+        int[] nums = {3, 35, 6, 2, 46};
+        System.out.println(findMin(nums));
 
     }
 
-    public static int findMin(int[] ints) {
+    public static int findMin (int[] ints) {
         int min = ints[0];
-
-        for (int i = 0; i < ints.length; i++) {
+        for (int i = 1; i < ints.length; i++) {
             if (ints[i] < min) {
                min = ints[i];
             }
