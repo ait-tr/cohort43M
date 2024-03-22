@@ -1,21 +1,26 @@
 public class Main_1 {
     public static void main(String[] args) {
-        int[] array = {1, 2, 8, 7};
 
-        System.out.println("Print even number");
-        for (int i = 0; i < array.length; i++) {
+        int[] ints = {1, 2, 8, 7};
+        System.out.println(countEven(ints));
 
-            if (i % 2 == 0) {
+    }
 
-                System.out.println(array[i]);
+    public static int countEven(int[] numbers) {
+
+        int counter = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+
+            if (numbers[i] % 2 == 0) {
+                counter++;
             }
-        }
 
         }
+        return counter;
 
-        }
-
-
+    }
+}
 
 /*
 Задача2
