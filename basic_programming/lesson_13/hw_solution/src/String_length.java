@@ -1,7 +1,7 @@
 public class String_length {
     public static void main(String[] args) {
-        String java = "Hello";
-        System.out.println(java.length());
+        String str = new String("Hello");
+        System.out.println(str.length());
     }
 
 
