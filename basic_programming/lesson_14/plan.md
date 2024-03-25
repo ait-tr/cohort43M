@@ -1,4 +1,33 @@
+1. Topic of the lesson:
 
+OOP is the next generation programming paradigm.
+
+Classes, objects and their fields, methods.
+- how to define object fields in a class;
+- what is an object constructor and why is it needed;
+- getters and setters - methods for getting and setting the values of object fields;
+- toString or display method to display an object in the console.
+
+OOP principles (three main ones):
+- encapsulation;
+- polymorphism;
+- inheritance.
+
+2. Practice:
+
+- create the Car class and several of its objects.
+
+- create the Employee class:
+    - fields
+    - constructor
+    - getters and setters
+    - display method
+
+- create a class FirmaAppl, in which:
+    - create objects of type Employee
+    - determine the salary and calculate its total amount.
+
+--------------------------------------------------
 
 1. Тема занятия:
 
