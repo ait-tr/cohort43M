@@ -148,6 +148,12 @@ Let's implement the BankAccount class:
 - ...
 
 - User 
+  private int id;
+  private String name;
+  private String email;
+  private String password;
+  private String role;
+  private boolean isActive;
 
 Для каждого из классов необходимо определить набор из 4-5 главных полей, задать им типы и наименования.
 

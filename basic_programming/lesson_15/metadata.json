@@ -3,10 +3,8 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "code/car/model/Car.java",
-    "code/car/CarAppl.java",
-    "code/firma/model/Employee.java",
-    "code/firma/FirmaAppl.java"
+    "/code/bank/model/BankAccount.java",
+    "/code/bank/BankAppl.java"
 
   ],
   "video": ""
