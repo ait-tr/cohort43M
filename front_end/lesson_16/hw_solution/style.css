@@ -17,9 +17,3 @@
 .joke-url{
     color: lightgray;
 }
-img{
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    overflow-x: ;
-    overflow-y: ;
-}
