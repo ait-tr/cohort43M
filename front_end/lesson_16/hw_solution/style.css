@@ -1,0 +1,25 @@
+.joke-card{
+    background-color: lightgoldenrodyellow;
+    border-radius: 15px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.joke-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.joke-url{
+    color: lightgray;
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    overflow-x: ;
+    overflow-y: ;
+}
