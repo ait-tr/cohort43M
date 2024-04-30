@@ -9,7 +9,7 @@ The maximum value is 127 (inclusive) (2^7-1).
 
 Default value is 0.
 
-The byte type is designed to save space in large arrays, mainly instead of integers, as byte is four times smaller than int.
+The byte type is designed to save space in large arraysInt, mainly instead of integers, as byte is four times smaller than int.
 Example:
 byte a = 100;
 byte b = -50;
@@ -62,7 +62,7 @@ long b = -200000L;
 Type float
 
 The float data type is a 32-bit single-precision IEEE 754 floating point number.
-The float type is mainly used to save memory in large arrays of floating point numbers.
+The float type is mainly used to save memory in large arraysInt of floating point numbers.
 Default value is 0.0f.
 The float type should never be used for precise values, such as currency.
 

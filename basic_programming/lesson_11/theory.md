@@ -62,7 +62,7 @@ Array indexing starts from 0, so in this case, to access the fourth element in t
 
 Since our array is defined for only 4 elements, we cannot access, for example, the sixth element: `nums[5] = 5;`. If we try to do so, we will get an error.
 
-An important property of arrays is the `length` property, which returns the length of the array, i.e., the number of its elements:
+An important property of arraysInt is the `length` property, which returns the length of the array, i.e., the number of its elements:
 
 ```java
 int[] nums = {1, 2, 3, 4, 5};
