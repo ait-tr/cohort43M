@@ -47,5 +47,23 @@ public class PlayLottery {
         result.checkLotteryResult(lottery, player1);
         result.checkLotteryResult(lottery, player2);
 
+
+        int firstElementFromFirstTicketFirstPlayer =
+                player1.getTickets()[0].getTicketNumbers()[0];
+
+
+        Player firstPlayer = player1;
+
+        LotteryTicket[] lotteryTickets = firstPlayer.getTickets();
+
+        LotteryTicket firstTicket = lotteryTickets[0];
+
+        int[] ticketNumbers = firstTicket.getTicketNumbers();
+
+        int firstElementFromTicketNumbers = ticketNumbers[0];
+
+
+        System.out.println(firstElementFromFirstTicketFirstPlayer);
+
     }
 }
