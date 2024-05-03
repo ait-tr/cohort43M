@@ -21,4 +21,18 @@ public class BookService {
        return newBook;
     }
 
+
+    public Book[] createLibrary(){
+        int totalBooks = ui.inputInt("Введите общее количество книг: ");
+
+        Book[] books = new Book[totalBooks];
+
+        for (int i = 0; i < totalBooks; i++) {
+            books[i] = createBook();
+        }
+
+        return books;
+    }
+
+
 }
