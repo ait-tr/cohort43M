@@ -6,12 +6,16 @@ public class BookService {
 
     UserInput ui = new UserInput();
 
-    public void createBook(){
+    public Book createBook(){
 
+       String author = ui.inputText("Введите автора: ");
+       String bookName = ui.inputText("Введите название книги: ");
+       int pages = ui.inputInt("Введите количество страниц: ");
+       String catalogNumber = ui.inputText("Введите номер по каталогу: ");
 
-        System.out.println(newBook.getBookName());
+       Book newBook = new Book(bookName,author,pages,catalogNumber);
 
-
+       return newBook;
     }
 
 }
