@@ -39,4 +39,14 @@ public class Book {
     public String getCatalogNumber() {
         return catalogNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bookName='" + bookName + '\'' +
+                ", bookAuthor='" + bookAuthor + '\'' +
+                ", bookPages=" + bookPages +
+                ", catalogNumber='" + catalogNumber + '\'' +
+                '}';
+    }
 }
