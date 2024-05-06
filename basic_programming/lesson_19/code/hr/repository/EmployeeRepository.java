@@ -3,6 +3,8 @@ package code.hr.repository;
 import code.hr.entity.Applicant;
 import code.hr.entity.Employee;
 
+import java.util.Arrays;
+
 public class EmployeeRepository {
     private Employee[] employees;
 
@@ -14,10 +16,10 @@ public class EmployeeRepository {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] == null) {
                 employees[i] = employee;
-                break;
+                return;
             }
-            System.out.println("База данных переполненна!");
         }
+        System.out.println("База данных переполненна!");
     }
 
     public Employee findByName(String name){
@@ -29,4 +31,11 @@ public class EmployeeRepository {
         return null;
     }
 
+
+    @Override
+    public String toString() {
+        return "EmployeeRepository{" +
+                "employees=" + Arrays.toString(employees) +
+                '}';
+    }
 }

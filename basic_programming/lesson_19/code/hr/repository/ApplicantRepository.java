@@ -2,6 +2,8 @@ package code.hr.repository;
 
 import code.hr.entity.Applicant;
 
+import java.util.Arrays;
+
 public class ApplicantRepository {
     private Applicant[] applicants;
 
@@ -25,10 +27,10 @@ public class ApplicantRepository {
         for (int i = 0; i < applicants.length; i++) {
             if (applicants[i] == null) {
                 applicants[i] = applicant;
-                break;
+                return;
             }
-            System.out.println("База данных переполненна!");
         }
+        System.out.println("База данных переполненна!");
     }
 
     public Applicant findByName(String name){
@@ -49,4 +51,10 @@ public class ApplicantRepository {
         return null;
     }
 
+    @Override
+    public String toString() {
+        return "ApplicantRepository{" +
+                "applicants=" + Arrays.toString(applicants) +
+                '}';
+    }
 }
