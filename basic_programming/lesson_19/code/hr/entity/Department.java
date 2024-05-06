@@ -1,4 +1,4 @@
-package code.hr;
+package code.hr.entity;
 
 public class Department {
 
