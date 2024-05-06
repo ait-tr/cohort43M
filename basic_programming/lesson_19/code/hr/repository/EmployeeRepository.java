@@ -1,6 +1,5 @@
 package code.hr.repository;
 
-import code.hr.entity.Applicant;
 import code.hr.entity.Employee;
 
 import java.util.Arrays;
