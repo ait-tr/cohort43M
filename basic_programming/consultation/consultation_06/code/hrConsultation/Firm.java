@@ -1,11 +1,11 @@
-package code.hr;
+package code.hrConsultation;
 
 import java.util.Arrays;
 
 public class Firm {
 
     String companyName;
-    Person director;
+    code.hrConsultation.Person director;
     Department[] departments;
 
     public Firm(String companyName, Person director, Department[] departments) {

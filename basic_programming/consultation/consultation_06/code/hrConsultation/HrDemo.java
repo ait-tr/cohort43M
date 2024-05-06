@@ -1,9 +1,4 @@
-package code.hr;
-
-import code.hr.Department;
-import code.hr.Firm;
-
-import java.util.Arrays;
+package code.hrConsultation;
 
 public class HrDemo {
     public static void main(String[] args) {

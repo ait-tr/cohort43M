@@ -1,4 +1,4 @@
-package code.hr;
+package code.hrConsultation;
 
 import java.util.Arrays;
 
