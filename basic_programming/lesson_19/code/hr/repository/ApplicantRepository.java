@@ -40,4 +40,13 @@ public class ApplicantRepository {
         return null;
     }
 
+    public Applicant findById(int id){
+        for (int i = 0; i < applicants.length; i++) {
+            if (applicants[i].getId() == id) {
+                return applicants[i];
+            }
+        }
+        return null;
+    }
+
 }
