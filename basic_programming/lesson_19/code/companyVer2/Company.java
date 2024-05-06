@@ -21,7 +21,12 @@ public class Company {
         System.out.println("Отдел: " + department.getName());
         for (int i = 0; i < department.getEmployees().length; i++) {
             System.out.println("Сотрудник: ");
-            System.out.println("Имя: " + department.getEmployees()[i].getName());
+
+            Employee[] employees = department.getEmployees();
+            Employee currentEmployee = employees[i];
+            System.out.println("Имя: " + currentEmployee.getName());
+
+            //System.out.println("Имя: " + department.getEmployees()[i].getName());
 
         }
     }
