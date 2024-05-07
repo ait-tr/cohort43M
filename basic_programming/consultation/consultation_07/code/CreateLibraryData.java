@@ -2,7 +2,7 @@ package code;
 
 public class CreateLibraryData {
 
-    public Library createLibrary(int storageAmount, int shelvesAmount){
+    public Library createLibrary(){
 
 
         Author author1 = new Author("Джек Лондон");

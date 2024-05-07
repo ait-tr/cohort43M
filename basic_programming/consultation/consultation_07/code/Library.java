@@ -3,29 +3,59 @@ package code;
 import java.util.Arrays;
 
 public class Library {
-    private BookStorage[] library;
+    private BookStorage[] storages;
 
-    public Library(BookStorage[] library) {
-        this.library = library;
+    public Library(BookStorage[] storages) {
+        this.storages = storages;
     }
 
-    public BookStorage[] getLibrary() {
-        return library;
+    public BookStorage[] getStorages() {
+        return storages;
     }
 
     @Override
     public String toString() {
         return "Library{" +
-                "library=" + Arrays.toString(library) +
+                "storages=" + Arrays.toString(storages) +
                 '}';
     }
 
-
-// --------- добавим методы для работы нашей библиотеки -------
+    // --------- добавим методы для работы нашей библиотеки -------
 /*
 - searchDataLibrary
 - printDataLibrary
  */
 
+    public void printDataLibrary(){
+
+
+        // проходим по нашей библиотеке в которой объектом хранения данных является массив шкафов
+        // то есть нам нужно пройтись в цикле по это массиву
+
+        for (int i = 0; i < storages.length; i++) {
+
+            // из массива шкафов возьмем текущий шкаф
+            BookStorage currentBookStorage = storages[i];
+            System.out.println(currentBookStorage.getLineId());
+
+            // из ЭТОТГО шкафа возьмем ссылку на массив полок
+            BookShelf[] shelvesFromCurrentStorage = currentBookStorage.getBookShelves();
+
+            for (int j = 0; j < shelvesFromCurrentStorage.length; j++) {
+                //берем из этого массива по одной полке (по очереди)
+                BookShelf currentBookShelf = shelvesFromCurrentStorage[j];
+                System.out.println(currentBookShelf.getIdNumber());
+
+                // с этой полки берем ссылку на тот массив книг который на ней находится
+                Book[] booksOnCurrentShelf = currentBookShelf.getBooks();
+
+                for (int k = 0; k < booksOnCurrentShelf.length; k++) {
+                    System.out.println("Книга: " + booksOnCurrentShelf[k]);
+                }
+            }
+
+        }
+
+    }
 
 }
