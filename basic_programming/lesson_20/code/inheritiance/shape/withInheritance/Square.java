@@ -24,4 +24,9 @@ public class Square extends Shape{
     public double calculatePerimeter() {
         return 4 * sideA;
     }
+
+
+    public void printData(){
+        System.out.println(sideA);
+    }
 }

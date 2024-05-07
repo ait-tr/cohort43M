@@ -28,4 +28,9 @@ public class Rectangle extends Shape {
     public double calculatePerimeter() {
         return 2 * ( sideA + sideB );
     }
+
+
+    public void printData(){
+        System.out.println(sideA);
+    }
 }
