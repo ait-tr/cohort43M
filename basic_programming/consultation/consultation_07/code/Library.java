@@ -58,4 +58,37 @@ public class Library {
 
     }
 
+
+    public void searchDataLibraryByBookName(String bookName) {
+        for (int i = 0; i < storages.length; i++) {
+
+            // из массива шкафов возьмем текущий шкаф
+            BookStorage currentBookStorage = storages[i];
+
+            // из ЭТОТГО шкафа возьмем ссылку на массив полок
+            BookShelf[] shelvesFromCurrentStorage = currentBookStorage.getBookShelves();
+
+            for (int j = 0; j < shelvesFromCurrentStorage.length; j++) {
+                //берем из этого массива по одной полке (по очереди)
+                BookShelf currentBookShelf = shelvesFromCurrentStorage[j];
+
+                // с этой полки берем ссылку на тот массив книг который на ней находится
+                Book[] booksOnCurrentShelf = currentBookShelf.getBooks();
+
+                for (int k = 0; k < booksOnCurrentShelf.length; k++) {
+
+                    if (booksOnCurrentShelf[k].getBookName().equals(bookName)) {
+                        System.out.println("книга найдена и находится:");
+                        System.out.println("Шкаф: " + currentBookStorage.getLineId());
+                        System.out.println("Полка: " + currentBookShelf.getIdNumber());
+                        System.out.println("Книга: " + booksOnCurrentShelf[k]);
+                        return;
+                    }
+                }
+            }
+        }
+        System.out.println("Книги с названием " + bookName + " не найдено!");
+    }
+
+
 }
