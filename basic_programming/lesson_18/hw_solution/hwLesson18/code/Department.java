@@ -1,25 +1,25 @@
 public class Department {
-    private String departmentName;
-    private Collaborator collaborator;
+    String departmentName;
+    Collaborator[] collaborators;
 
-    public Department(String departmentName, Collaborator collaborator) {
+    public Department(String departmentName, Collaborator[] collaborators) {
         this.departmentName = departmentName;
-        this.collaborator = collaborator;
+        this.collaborators = collaborators;
     }
 
     public String getDepartmentName() {
         return departmentName;
     }
 
-    public Collaborator getCollaborator() {
-        return collaborator;
+    public Collaborator[] getCollaborator() {
+        return collaborators;
     }
 
     @Override
     public String toString() {
         return "Department{" +
                 "Name='" + departmentName + '\'' +
-                ", Collaborator=" + collaborator +
+                ", Collaborator=" + collaborators +
                 '}';
     }
 }
