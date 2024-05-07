@@ -5,6 +5,8 @@ public class Book {
     private String catalogNumber;
     private String bookName;
     private Author author;
+    private String shelf;
+    private String storage;
 
     public Book(String catalogNumber, String bookName, Author author) {
         this.catalogNumber = catalogNumber;

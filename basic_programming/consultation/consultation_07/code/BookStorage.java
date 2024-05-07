@@ -7,6 +7,7 @@ public class BookStorage {
     private String lineId;
     private int numberOfShelves;
     private BookShelf[] bookShelves;
+    private Author[] authors;
 
     public BookStorage(String lineId, int numberOfShelves) {
         this.lineId = lineId;
