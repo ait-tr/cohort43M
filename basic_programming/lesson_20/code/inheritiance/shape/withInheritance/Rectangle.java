@@ -1,19 +1,14 @@
 package code.inheritiance.shape.withInheritance;
 
-public class Rectangle extends  {
+public class Rectangle extends Shape {
 
-    private String title;
     private double sideA;
     private double sideB;
 
     public Rectangle(String title, double sideA, double sideB) {
-        this.title = title;
+        super(title);
         this.sideA = sideA;
         this.sideB = sideB;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     public double getSideA() {
@@ -24,10 +19,12 @@ public class Rectangle extends  {
         return sideB;
     }
 
+    @Override
     public double calculateArea() {
         return sideA * sideB;
     }
 
+    @Override
     public double calculatePerimeter() {
         return 2 * ( sideA + sideB );
     }

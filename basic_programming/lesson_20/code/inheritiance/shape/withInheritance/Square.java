@@ -1,27 +1,26 @@
 package code.inheritiance.shape.withInheritance;
 
-public class Square {
+public class Square extends Shape{
 
-    private String title;
+
     private double sideA;
 
     public Square(String title, double sideA) {
-        this.title = title;
+        super(title);
         this.sideA = sideA;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     public double getSideA() {
         return sideA;
     }
 
+    @Override
     public double calculateArea() {
         return sideA * sideA;
     }
 
+
+    @Override
     public double calculatePerimeter() {
         return 4 * sideA;
     }
