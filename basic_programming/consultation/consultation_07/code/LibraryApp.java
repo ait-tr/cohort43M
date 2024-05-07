@@ -6,7 +6,7 @@ public class LibraryApp {
 
         Library library = data.createLibrary();
 
-        System.out.println(library);
+        library.printDataLibrary();
 
     }
 }
