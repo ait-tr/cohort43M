@@ -10,6 +10,8 @@ public class MusicianDemo {
         musician.dance();
         musician.sing();
 
+        Musician[] musicians = {musician};
+
 //        singer.sing();
 //
 //        dancer.dance();
@@ -38,13 +40,10 @@ public class MusicianDemo {
 
         System.out.println("=============================");
 
-        for (int i = 0; i < singers.length; i++) {
-            singers[i].sing();
-        }
+       MusicianService service = new MusicianService();
 
-        for (int i = 0; i < dancers.length; i++) {
-            dancers[i].dance();
-        }
+       service.singAll(singers);
+       service.danceAll(dancers);
 
     }
 }
