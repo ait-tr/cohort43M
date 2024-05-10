@@ -6,9 +6,9 @@ public class Repair implements Serviceable{
     private String workStatus;
 
 
-    public Repair(String typeWorkDescription, String workStatus) {
+    public Repair(String typeWorkDescription) {
         this.typeWorkDescription = typeWorkDescription;
-        this.workStatus = workStatus;
+        this.workStatus = "Assigned";
     }
 
     @Override
