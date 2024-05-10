@@ -4,16 +4,16 @@ import java.util.Arrays;
 
 public class TeaTypes {
 
-    private String[] teaTypes = {"black","green", "herbal", "fruits"};
+    private String[] arrayTeaTypes = {"black","green", "herbal", "fruits"};
 
-    public String[] getTeaTypes() {
-        return teaTypes;
+    public String[] getArrayTeaTypes() {
+        return arrayTeaTypes;
     }
 
     @Override
     public String toString() {
         return "TeaTypes{" +
-                "teaTypes=" + Arrays.toString(teaTypes) +
+                "teaTypes=" + Arrays.toString(arrayTeaTypes) +
                 '}';
     }
 }

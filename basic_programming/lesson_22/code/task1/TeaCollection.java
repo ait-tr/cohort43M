@@ -76,7 +76,11 @@ public class TeaCollection {
                 System.out.println("№ " + teas[i].getTeaId());
                 System.out.println("Производитель: " + teas[i].getTeaProducer());
                 System.out.println("Название: " + teas[i].getTeaName());
-                System.out.println("Тип чая: " + teas[i].getTeaTypes().getTeaTypes()[teas[i].getIndexArrayTeaType()]);
+
+                String[] listAllTeaTypes = teas[i].getTeaTypes().getArrayTeaTypes();
+                int indexForListAllTeaTypes = teas[i].getIndexArrayTeaType();
+
+                System.out.println("Тип чая: " + listAllTeaTypes[indexForListAllTeaTypes]);
 
             } else {
                 System.out.println("Пустая ячейка массива");
