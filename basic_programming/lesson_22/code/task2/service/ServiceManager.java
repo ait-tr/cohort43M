@@ -48,8 +48,8 @@ public class ServiceManager {
 
     }
 
-    public void printServiceStatus(int orderNumber) {
-        System.out.println(serviceables[orderNumber].getWorkStatus());
+    public void printServiceStatus(int indexMyOder) {
+        System.out.println(serviceables[indexMyOder].getWorkStatus());
     }
 
     public void changeServiceStatus(int orderNumber, String newStatus){
