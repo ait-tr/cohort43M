@@ -28,7 +28,7 @@ public class TeaApp {
             System.out.println("Чай успешно добавлен");
         } else {
             System.out.println("Добавить не удалось - нет свободного места");
-        } ;
+        }
 
 
         teaCollection.add(tea2);
@@ -42,7 +42,7 @@ public class TeaApp {
             System.out.println("Чай успешно добавлен");
         } else {
             System.out.println("Добавить не удалось - нет свободного места");
-        } ;
+        }
 
 
         teaCollection.printCollection();
