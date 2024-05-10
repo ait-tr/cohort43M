@@ -30,17 +30,22 @@ public class ServiceManager {
         // предположим что типы работ могут быть только "Repair" или "Paint"
 
         if (serviceCounter < serviceables.length) {
-            if (workDescription.contains("repair")) {
+            if (workDescription.toLowerCase().contains("repair")) {
                 serviceables[serviceCounter] = new Repair(workDescription);
+                serviceCounter++;
+
+                System.out.println("Service started for " + vehicle.getBrand() + " " + vehicle.getModel() + " " + workDescription);
+
             }
 
-            if (workDescription.contains("paint")) {
+            if (workDescription.toLowerCase().contains("paint")) {
                 serviceables[serviceCounter] = new Painting(workDescription);
+                serviceCounter++;
+
+                System.out.println("Service started for " + vehicle.getBrand() + " " + vehicle.getModel() + " " + workDescription);
+
             }
 
-            serviceCounter++;
-
-            System.out.println("Service started for " + vehicle.getBrand() + " " + vehicle.getModel() + " " + workDescription);
 
         } else {
             System.out.println("Can't assign more services, limit reached!");
