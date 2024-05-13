@@ -1,0 +1,28 @@
+DRY - Don't repeat yourself! - Не повторяйся
+
+SSOT - single source of truth - единый источник правды
+
+
+
+KISS -
+- Keep it simple, stupid!
+- Keep it stupid simple!
+
+
+SOLID -
+- single responsibility principle - принцип единой ответственности
+- open-close principle - принцип открытости / закрытости
+- Liskov substitution principle  - принцип подстановки Лисков
+- Interface segregation principle - принцип разделения интерфейсов
+- Dependency inversion principle - принцип инверсий зависимостей
+
+
+getUserAndRelatedBooks ->
+ - getUser()
+ - getUsersBooks(getUser())
+
+
+SoC - Separation of Concerns - разделение ответственности
+
+
+YAGNI - You ain't gonna need it - вам это не понадобится
