@@ -14,11 +14,11 @@ public class Celebration {
         Ball[] balls = {
                 ballRedHeart,ballRedHeart,ballRedHeart,
                 ballDarkBlueClassic,ballDarkBlueClassic,
-                ballDarkBlueClassic,ballDarkBlueClassic,
+//                ballDarkBlueClassic,ballDarkBlueClassic,
                 ballSilverStar,ballSilverStar,
                 ballRedClassic,ballRedClassic,
-                ballLightBlueClassic,ballLightBlueClassic,
-                ballLightBlueClassic,ballLightBlueClassic,
+     //           ballLightBlueClassic,ballLightBlueClassic,
+       //         ballLightBlueClassic,ballLightBlueClassic,
                 ballLightBlueClassic,ballLightBlueClassic
         };
 
@@ -43,10 +43,13 @@ public class Celebration {
 
         // --------- отсортируем по цвету ----------
 
-        String[] colors = { "Red", "Light Blue", "Dark Blue", "Silver"};
+        String[] colors = {  "Silver", "Red", "Light Blue", "Dark Blue"};
 
         boolean notSorted = true;
         Ball temp;
+
+        printBallsArray(balls);
+        System.out.println();
 
         while (notSorted) {
 
@@ -66,6 +69,8 @@ public class Celebration {
                 }
 
                 if (colorNumberBallCurrent > colorNumberBallNext){
+                    printBallsArray(balls);
+                    System.out.println();
                     temp = balls[i];
                     balls[i] = balls[i +  1];
                     balls[i + 1] = temp;
@@ -74,10 +79,17 @@ public class Celebration {
             }
         }
 
-        System.out.println("-------- отсортировали все шарики --------");
-        for (int i = 0; i < balls.length; i++) {
-            System.out.println("Цвет шарика: " + balls[i].getColor() + " форма: " + balls[i].getForm());
-        }
+        printBallsArray(balls);
+//        System.out.println("-------- отсортировали все шарики --------");
+//        for (int i = 0; i < balls.length; i++) {
+//            System.out.println("Цвет шарика: " + balls[i].getColor() + " форма: " + balls[i].getForm());
+//        }
 
+    }
+
+    public static void printBallsArray(Ball[] balls){
+        for (int i = 0; i < balls.length; i++) {
+            System.out.print(balls[i].getColor() + ", ");
+        }
     }
 }
