@@ -1,12 +1,11 @@
 package code.library.repository;
 
-import code.library.entity.Book;
 import code.library.entity.Magazine;
 
 public class MagazineRepository {
     private Magazine[] magazines;
     private int count = 0;
-    private LibraryRepository libraryRepository
+    private LibraryRepository libraryRepository;
 
     public MagazineRepository(int sizeOfMagazines, LibraryRepository libraryRepository) {
         this.magazines = new Magazine[sizeOfMagazines];
