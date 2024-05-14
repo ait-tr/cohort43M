@@ -17,4 +17,13 @@ public class LibraryRepository {
             count++;
         }
     }
+
+    public LibraryElement findByTitle(String title){
+        for (int i = 0; i < count; i++) {
+            if (elements[i].getTitle().equals(title)){
+                return elements[i];
+            }
+        }
+        return null;
+    }
 }

@@ -4,6 +4,7 @@ import code.library.entity.Book;
 import code.library.entity.Reader;
 import code.library.service.BookService;
 import code.library.service.MagazineService;
+import code.library.service.ReaderLendService;
 import code.library.service.ReaderService;
 import code.library.var1.UserInput;
 
@@ -14,12 +15,14 @@ public class UserInterfaceService {
     private BookService bookService;
     private MagazineService magazineService;
     private ReaderService readerService;
+    private ReaderLendService readerLendService;
 
-    public UserInterfaceService(UserInput userInput, BookService bookService, MagazineService magazineService, ReaderService readerService) {
+    public UserInterfaceService(UserInput userInput, BookService bookService, MagazineService magazineService, ReaderService readerService, ReaderLendService readerLendService) {
         this.userInput = userInput;
         this.bookService = bookService;
         this.magazineService = magazineService;
         this.readerService = readerService;
+        this.readerLendService = readerLendService;
     }
 
     public  void printMenu(){
@@ -68,5 +71,12 @@ public class UserInterfaceService {
         int readerId = userInput.inputInt("Enter reader id for search : ");
         Reader foundedReader = readerService.findById(readerId);
         return foundedReader;
+    }
+
+
+    public boolean makeLend(){
+        int readerId = userInput.inputInt("Enter reader id for lend : ");
+        String title = userInput.inputText("Enter title for lend :");
+        return readerLendService.makeLend(readerId,title);
     }
 }

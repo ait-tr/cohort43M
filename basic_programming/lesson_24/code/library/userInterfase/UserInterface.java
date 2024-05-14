@@ -16,7 +16,7 @@ public class UserInterface {
         this.userInput = userInput;
     }
 
-    public void start(){
+    public void start() {
         while (true) {
             service.printMenu();
 
@@ -81,15 +81,4 @@ public class UserInterface {
 
         }
     }
-
-//    System.out.println("======= MENU ========");
-//        System.out.println("1. Add book");
-//        System.out.println("2. Add reader");
-//        System.out.println("3. Find book by Title");
-//        System.out.println("4. Find books by Author");
-//        System.out.println("5. Find reader by Id");
-//        System.out.println("6. Lend book to reader");
-//        System.out.println("7. Exit");
-//
-//
 }
