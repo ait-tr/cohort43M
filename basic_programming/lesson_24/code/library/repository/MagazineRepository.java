@@ -6,14 +6,17 @@ import code.library.entity.Magazine;
 public class MagazineRepository {
     private Magazine[] magazines;
     private int count = 0;
+    private LibraryRepository libraryRepository
 
-    public MagazineRepository(int sizeOfMagazines) {
+    public MagazineRepository(int sizeOfMagazines, LibraryRepository libraryRepository) {
         this.magazines = new Magazine[sizeOfMagazines];
+        this.libraryRepository = libraryRepository;
     }
 
     public void add(Magazine magazine) {
         if (count < magazines.length){
             magazines[count++] = magazine;
+            libraryRepository.add(magazine);
         }
     }
 
