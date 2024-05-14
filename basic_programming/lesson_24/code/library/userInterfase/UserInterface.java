@@ -80,6 +80,7 @@ public class UserInterface {
                     } else {
                         System.out.println("Книгу нельзя выдать");
                     }
+                    break;
 
                 case 7:
                     System.out.println("Exit ...");
