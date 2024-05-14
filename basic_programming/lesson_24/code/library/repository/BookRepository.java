@@ -13,7 +13,7 @@ public class BookRepository {
         this.libraryRepository = libraryRepository;
     }
 
-    public void add(Book book){
+    public boolean add(Book book){
         if (count < books.length) {
             books[count] = book;
             count++;
@@ -22,7 +22,10 @@ public class BookRepository {
            // books[++count] = book;- сперва увеличиваем count на 1, а затем в массив с индексом count записываем ссылку на книгу
 
             libraryRepository.add(book);
+            return true;
         }
+
+        return false;
     }
 
     public Book findByTitle(String titleForSearch){

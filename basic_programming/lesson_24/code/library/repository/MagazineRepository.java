@@ -12,11 +12,13 @@ public class MagazineRepository {
         this.libraryRepository = libraryRepository;
     }
 
-    public void add(Magazine magazine) {
+    public boolean add(Magazine magazine) {
         if (count < magazines.length){
             magazines[count++] = magazine;
             libraryRepository.add(magazine);
+            return true;
         }
+        return false;
     }
 
 
