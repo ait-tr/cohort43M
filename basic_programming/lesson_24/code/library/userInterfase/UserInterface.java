@@ -73,6 +73,14 @@ public class UserInterface {
                     }
                     break;
 
+                case 6:
+                    boolean lendResult = service.makeLend();
+                    if (lendResult) {
+                        System.out.println("Книга выдана");
+                    } else {
+                        System.out.println("Книгу нельзя выдать");
+                    }
+
                 case 7:
                     System.out.println("Exit ...");
                     return;

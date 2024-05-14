@@ -21,7 +21,7 @@ public class ReaderLendService {
 
         Reader foundedReader = readerRepository.findById(readerId);
 
-        if (foundedElement != null && foundedReader != null) {
+        if ( foundedElement != null && foundedReader != null && foundedElement.getIdReader() == 0) {
             foundedElement.setIdReader(readerId);
             LibraryElement[] elements = foundedReader.getElements();
             for (int i = 0; i < elements.length; i++) {
