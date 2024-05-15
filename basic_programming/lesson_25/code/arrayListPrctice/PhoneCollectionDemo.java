@@ -26,6 +26,22 @@ public class PhoneCollectionDemo {
         System.out.println(phones);
         System.out.println(phones.size());
 
+        phones.add(new Phone(2,"iPhone 14 Max Pro", "Apple", 1350.0));
+        phones.add(new Phone(3,"iPhone 15 Max Pro", "Apple", 1550.0));
+        phones.add(new Phone(4,"Galaxy", "Samsung", 1100.0));
+        phones.add(new Phone(5,"G6", "Huawei", 900.0));
+
+        System.out.println(phones);
+        System.out.println(phones.size());
+
+        System.out.println(phones.get(2));
+
+        phones.remove(2);
+
+        System.out.println(phones);
+
+        System.out.println(phones.get(2));
+
 
     }
 }
