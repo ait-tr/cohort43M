@@ -1,4 +1,4 @@
-package code.das;
+package code.dynamicArrayStructure;
 
 import java.util.Arrays;
 
