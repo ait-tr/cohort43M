@@ -14,6 +14,28 @@ public class CatRepository {
         cats.remove(cat);
     }
 
+
+    public Cat findByName(String name){
+        for (int i = 0; i < cats.size(); i++) {
+            if (cats.get(i).getName().equals(name)) {
+                return cats.get(i);
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<Cat> findByBreed(String breed){
+       ArrayList<Cat> catsWithSameBreed = new ArrayList<>();
+
+        for (int i = 0; i < cats.size(); i++) {
+            if (cats.get(i).getBreed().equals(breed)) {
+                catsWithSameBreed.add(cats.get(i));
+            }
+        }
+
+        return catsWithSameBreed;
+    }
+
     public void printData(){
         System.out.println("---------------------");
         for (int i = 0; i < cats.size(); i++) {
