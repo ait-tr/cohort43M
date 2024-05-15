@@ -7,7 +7,7 @@ public class CatDemo {
         CatRepository repository = new CatRepository();
 
         for (int i = 0; i < 5; i++) {
-            Cat cat = new Cat("Cat # " + i, "breed # " + i);
+            Cat cat = new Cat("Cat # " + i, "breed # " + i / 2);
             repository.addCat(cat);
         }
 
@@ -17,6 +17,8 @@ public class CatDemo {
         repository.runawayCat(runawayCat);
 
         repository.printData();
+
+        System.out.println(repository.findByBreed("breed # 1"));
 
 
     }
