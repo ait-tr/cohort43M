@@ -1,5 +1,7 @@
 package code.arrayListPrctice;
 
+import java.util.Objects;
+
 public class Phone {
     private Integer id;
     private String model;
@@ -38,5 +40,18 @@ public class Phone {
                 ", producer='" + producer + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Phone phone = (Phone) o;
+        return Objects.equals(id, phone.id) && Objects.equals(model, phone.model) && Objects.equals(producer, phone.producer) && Objects.equals(price, phone.price);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, model, producer, price);
     }
 }
