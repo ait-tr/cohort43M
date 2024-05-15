@@ -33,7 +33,8 @@ public class TvCollection {
         for (int i = 0; i < tvs.size(); i++) {
             TV currentTV = tvs.get(i);
             if (currentTV.getManufacturer().equals(manufacturerForDelete)) {
-                tvs.remove(currentTV);
+               tvs.remove(i);
+              //  tvs.remove(currentTV);
                 //break;
             }
 
