@@ -1,5 +1,6 @@
 package code.hr.service;
 
+
 import code.hr.entity.Applicant;
 import code.hr.entity.Person;
 import code.hr.repository.ApplicantRepository;
