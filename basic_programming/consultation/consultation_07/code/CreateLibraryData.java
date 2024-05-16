@@ -1,7 +1,5 @@
 package code;
 
-import code.withCollections.entity.Book;
-
 public class CreateLibraryData {
 
     public Library createLibrary(){
