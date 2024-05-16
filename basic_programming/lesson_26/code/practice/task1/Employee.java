@@ -1,17 +1,17 @@
 package code.practice.task1;
 
 public class Employee {
-    private Integer personalCode;
+    private String personalCode;
     private String name;
-    private Integer departmentId;
+    private Department department;
 
-    public Employee(Integer personalCode, String name, Integer departmentId) {
+    public Employee(String personalCode, String name, Department department) {
         this.personalCode = personalCode;
         this.name = name;
-        this.departmentId = departmentId;
+        this.department = department;
     }
 
-    public Integer getPersonalCode() {
+    public String getPersonalCode() {
         return personalCode;
     }
 
@@ -19,8 +19,8 @@ public class Employee {
         return name;
     }
 
-    public Integer getDepartmentId() {
-        return departmentId;
+    public Department getDepartment() {
+        return department;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Employee {
         return "Employee{" +
                 "personalCode=" + personalCode +
                 ", name='" + name + '\'' +
-                ", departmentId=" + departmentId +
+                ", department=" + department +
                 '}';
     }
 }
