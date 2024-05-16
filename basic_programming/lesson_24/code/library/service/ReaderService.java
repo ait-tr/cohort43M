@@ -1,8 +1,6 @@
 package code.library.service;
 
-import code.library.entity.Book;
-import code.library.entity.Reader;
-import code.library.repository.BookRepository;
+import code.withCollections.entity.Reader;
 import code.library.repository.ReaderRepository;
 
 public class ReaderService {

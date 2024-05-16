@@ -1,6 +1,6 @@
 package code.library.repository;
 
-import code.library.entity.Book;
+import code.withCollections.entity.Book;
 
 public class BookRepository {
 

@@ -1,7 +1,6 @@
 package code.library.repository;
 
-import code.library.entity.Book;
-import code.library.entity.Reader;
+import code.withCollections.entity.Reader;
 
 public class ReaderRepository {
 

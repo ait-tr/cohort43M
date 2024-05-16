@@ -1,7 +1,7 @@
 package code.library.userInterfase;
 
-import code.library.entity.Book;
-import code.library.entity.Reader;
+import code.withCollections.entity.Book;
+import code.withCollections.entity.Reader;
 import code.library.var1.UserInput;
 
 import java.util.Arrays;

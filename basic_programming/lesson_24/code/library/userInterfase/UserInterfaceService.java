@@ -1,7 +1,7 @@
 package code.library.userInterfase;
 
-import code.library.entity.Book;
-import code.library.entity.Reader;
+import code.withCollections.entity.Book;
+import code.withCollections.entity.Reader;
 import code.library.service.BookService;
 import code.library.service.MagazineService;
 import code.library.service.ReaderLendService;

@@ -1,7 +1,7 @@
 package code.library.service;
 
 import code.library.entity.LibraryElement;
-import code.library.entity.Reader;
+import code.withCollections.entity.Reader;
 import code.library.repository.LibraryRepository;
 import code.library.repository.ReaderRepository;
 
