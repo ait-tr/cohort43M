@@ -1,5 +1,6 @@
 package code.withCollections.repository;
 
+import code.withCollections.entity.Book;
 import code.withCollections.entity.BookAndReader;
 
 import java.util.ArrayList;
@@ -32,4 +33,9 @@ public class BookAndReaderRepository {
         return booksIdForReader;
     }
 
+    public void printInfo(){
+        for (BookAndReader record : repository){
+            System.out.println(record);
+        }
+    }
 }

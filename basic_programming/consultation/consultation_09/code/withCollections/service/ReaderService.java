@@ -40,5 +40,8 @@ public class ReaderService {
         return repository.findById(readerId);
     }
 
+    public void printInfo(){
+       repository.printInfo();
+    }
 
 }

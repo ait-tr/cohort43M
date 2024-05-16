@@ -49,4 +49,7 @@ public class BookService {
         return repository.findByAuthor(author);
     }
 
+    public void printInfo(){
+       repository.printInfo();
+    }
 }

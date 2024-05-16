@@ -6,6 +6,7 @@ import code.withCollections.entity.Reader;
 import code.withCollections.repository.BookAndReaderRepository;
 import code.withCollections.repository.ReaderRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BookAndReaderService {
@@ -48,6 +49,24 @@ public class BookAndReaderService {
 
 
 
+    public List<Book> findAllBookFromReader(Reader reader){
+        Integer readerId = reader.getReaderId();
+
+        List<Integer> listBooksId = repository.findByReaderId(readerId);
+
+        List<Book> allBooksFromReader = new ArrayList<>();
+
+        for (Integer id : listBooksId) {
+            Book foundedBook = bookService.findById(id);
+            allBooksFromReader.add(foundedBook);
+        }
+
+        return allBooksFromReader;
+    }
+
+    public void printInfo(){
+       repository.printInfo();
+    }
 
 
 }
