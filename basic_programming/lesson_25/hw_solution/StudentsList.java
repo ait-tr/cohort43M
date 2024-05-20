@@ -20,8 +20,8 @@ public class StudentsList {
         StudentsNames.add(new Students("Петр Петров"));
         StudentsNames.add(new Students("Сидоров"));
 
-        for (int i =0; i < StudentsNames.size();  i++ ) {
-            System.out.println(StudentsNames.get(i));
+        for (int i = StudentsNames.size()-1; i >= 0;  i-- ) {
+            System.out.println(i+ " " + StudentsNames.get(i));
         }
 
         int indexForDelete = 4;
@@ -31,7 +31,7 @@ public class StudentsList {
         System.out.println("***Студент с индексом " + indexForDelete + " удален***");
 
         for (int i =0; i < StudentsNames.size();  i++ ) {
-            System.out.println(StudentsNames.get(i));
+            System.out.println( i + " " + StudentsNames.get(i));
         }
 
     }
