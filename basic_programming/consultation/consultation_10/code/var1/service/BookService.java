@@ -3,6 +3,7 @@ package code.var1.service;
 
 import code.var1.entity.Author;
 import code.var1.entity.Book;
+import code.var1.entity.Reader;
 import code.var1.repository.BookRepository;
 
 import java.util.List;
@@ -37,5 +38,19 @@ public class BookService {
         return repository.findByAuthor(author);
     }
 
+
+    // ----- метод выдачи книги конкретному читателю ----
+
+    public void lendBookToReader(String title, Reader reader){
+        Book bookForLend = findByTitle(title);
+
+        if (bookForLend != null) {
+            bookForLend.setReaderId(reader.getReaderId());
+            List<Book> readerBooks = reader.getReaderBooks();
+            readerBooks.add(bookForLend);
+            System.out.println("Книга " + bookForLend + " успешно выдана читателю " + reader.getReaderName());
+        }
+
+    }
 
 }

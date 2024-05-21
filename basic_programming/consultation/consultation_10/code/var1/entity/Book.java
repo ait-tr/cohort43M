@@ -39,6 +39,10 @@ public class Book {
         this.bookId = bookId;
     }
 
+    public void setReaderId(Integer readerId) {
+        this.readerId = readerId;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
