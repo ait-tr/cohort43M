@@ -46,4 +46,10 @@ public class BookRepository {
         }
         return foundedBooks;
     }
+
+    public void printBookInfo(){
+        for (Book book : books){
+            System.out.println(book);
+        }
+    }
 }

@@ -41,4 +41,8 @@ public class ReaderService {
         }
 
     }
+
+    public void printReaderInfo(){
+        repository.printReaderInfo();
+    }
 }

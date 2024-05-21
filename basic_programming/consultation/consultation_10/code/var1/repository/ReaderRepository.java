@@ -36,5 +36,10 @@ public class ReaderRepository {
         return null;
     }
 
+    public void printReaderInfo(){
+        for (Reader reader : readers){
+            System.out.println(reader);
+        }
+    }
 
 }

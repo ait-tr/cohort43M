@@ -21,8 +21,13 @@ public class BookService {
     public Book addNewbook(String isbn, String title, String authorName){
 
         Author author = authorService.findByName(authorName);
+
+        if (author != null) {
         Book newBook = new Book(isbn,title, author);
         return repository.add(newBook);
+        }
+
+        return null;
     }
 
     public Book findById(Integer bookId){
@@ -51,6 +56,10 @@ public class BookService {
             System.out.println("Книга " + bookForLend + " успешно выдана читателю " + reader.getReaderName());
         }
 
+    }
+
+    public void printBooksInfo(){
+        repository.printBookInfo();
     }
 
 }
