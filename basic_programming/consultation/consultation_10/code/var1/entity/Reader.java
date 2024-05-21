@@ -27,6 +27,11 @@ public class Reader {
         return readerBooks;
     }
 
+
+    public void setReaderId(Integer readerId) {
+        this.readerId = readerId;
+    }
+
     @Override
     public String toString() {
         return "Reader{" +

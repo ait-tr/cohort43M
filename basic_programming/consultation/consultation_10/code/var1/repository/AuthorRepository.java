@@ -15,7 +15,16 @@ public class AuthorRepository {
 
     public Author findById(Integer authorId){
         for (Author author : authors){
-            if (authorId == author.getAuthorId()) {
+            if (authorId.equals(author.getAuthorId())) {
+                return author;
+            }
+        }
+        return null;
+    }
+
+    public Author findByName(String authorName){
+        for (Author author : authors){
+            if (authorName.equals(author.getAuthorName())) {
                 return author;
             }
         }
