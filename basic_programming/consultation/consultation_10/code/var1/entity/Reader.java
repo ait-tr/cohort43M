@@ -9,8 +9,7 @@ public class Reader {
     private String readerName;
     private List<Book> readerBooks;
 
-    public Reader(Integer readerId, String readerName, List<Book> readerBooks) {
-        this.readerId = readerId;
+    public Reader( String readerName) {
         this.readerName = readerName;
         this.readerBooks = new ArrayList<>();
     }
