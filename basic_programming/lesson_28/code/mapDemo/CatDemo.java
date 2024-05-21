@@ -15,16 +15,30 @@ public class CatDemo {
         Cat cat5 = new Cat("Lucky", "grey");
         Cat cat6 = new Cat("Vasjka", "white");
 
+        List<Cat> cats = new ArrayList<>();
         List<Cat> greyCats = new ArrayList<>();
         List<Cat> whiteCats = new ArrayList<>();
 
-        greyCats.add(cat1);
-        greyCats.add(cat3);
-        greyCats.add(cat5);
 
-        whiteCats.add(cat2);
-        whiteCats.add(cat4);
-        whiteCats.add(cat6);
+        cats.add(cat1);
+        cats.add(cat3);
+        cats.add(cat5);
+        cats.add(cat2);
+        cats.add(cat4);
+        cats.add(cat6);
+
+
+        for (Cat cat : cats){
+
+            if (cat.getColor().equals("grey")) {
+                greyCats.add(cat);
+            }
+            if (cat.getColor().equals("white")) {
+                whiteCats.add(cat);
+            }
+
+        }
+
 
         Map<String, List<Cat>> stringListMap = new HashMap<>();
 
@@ -32,9 +46,6 @@ public class CatDemo {
         stringListMap.put("whiteCats", whiteCats);
 
         System.out.println(stringListMap);
-
-
-
 
 
     }
