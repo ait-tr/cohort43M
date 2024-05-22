@@ -1,8 +1,5 @@
 package code.treeSet;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Date;
 import java.util.Objects;
 
 public class Dog implements Comparable<Dog>{
