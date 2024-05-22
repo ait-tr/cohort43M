@@ -1,7 +1,5 @@
 package code.compareObjects.comparable;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Objects;
 
 public class Book implements Comparable<Book>{
@@ -44,7 +42,7 @@ public class Book implements Comparable<Book>{
     }
 
     @Override
-    public int compareTo(@NotNull Book book) {
+    public int compareTo(Book book) {
         int compareResult = id - book.getId();
         if (compareResult == 0) {
             compareResult = title.compareTo(book.getTitle());
