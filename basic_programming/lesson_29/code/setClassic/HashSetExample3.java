@@ -1,4 +1,4 @@
-package code.set;
+package code.setClassic;
 
 import java.util.ArrayList;
 import java.util.HashSet;
