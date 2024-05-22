@@ -27,7 +27,11 @@ public class HashSetExample4 {
         List<String> wordsList = Arrays.asList(words);
         Set<String> setWords = new HashSet<>(wordsList);
 
-        System.out.println(setWords);
+        List<String> finalWordList = new ArrayList<>(setWords);
+        Collections.sort(finalWordList);
+
+
+        System.out.println(finalWordList);
 
     }
 }
