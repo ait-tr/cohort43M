@@ -35,6 +35,9 @@ public class HashMapExample {
 
         // --------- вариант 3 ------
 
+        for (Map.Entry<String, String> entry : telBook.entrySet()) {
+            System.out.println(entry.getKey() + " - > " + entry.getValue());
+        }
 
 
     }
