@@ -26,12 +26,22 @@ public class CatIteratorExample {
 
         System.out.println(catsList);
 
-        for (Cat tempCat : catsList){
+//        for (Cat tempCat : catsList){
+//            if (tempCat.getName().equals("Begemot")) {
+//                catsList.remove(tempCat);
+//            }
+//        }
+
+
+        for (int i = 0; i < catsList.size(); i++) {
+            Cat tempCat = catsList.get(i);
             if (tempCat.getName().equals("Begemot")) {
                 catsList.remove(tempCat);
+                catsList.add(i,matroskin);
             }
         }
 
+        System.out.println(catsList);
 
     }
 }
