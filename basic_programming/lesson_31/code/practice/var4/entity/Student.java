@@ -33,7 +33,7 @@ public class Student {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", group=" + group +
+                ", groupId=" + group.getGroupId() +
                 '}';
     }
 }

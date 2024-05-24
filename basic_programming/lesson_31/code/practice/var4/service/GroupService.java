@@ -17,6 +17,12 @@ public class GroupService {
         return repository.addGroup(new Group(groupId));
     }
 
+    public Group addNewStudentToGroup(String groupId, Student newStudent){
+        List<Student> studentsByGroup = findStudentsByGroupName(groupId);
+        studentsByGroup.add(newStudent);
+        return findGroupByName(groupId);
+    }
+
     public List<Group> findAllGroups(){
         return repository.findAll();
     }

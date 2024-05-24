@@ -25,6 +25,7 @@ public class StudentService {
 
         Student newStudent = new Student(0, studentName, group);
         Student savedStudent = repository.addStudent(newStudent);
+        groupService.addNewStudentToGroup(studentGroup, savedStudent);
         return savedStudent;
     }
 
