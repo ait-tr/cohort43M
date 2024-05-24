@@ -24,4 +24,9 @@ public class StudentService {
         return repository.findByGroup(group);
     }
 
+    public List<Student> findByStudentName(String studentName){
+        return repository.findByName(studentName);
+    }
+
+
 }

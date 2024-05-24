@@ -40,4 +40,29 @@ public class StudentRepository {
     public List<Student> findByGroup(String group){
       return students.get(group);
         }
+
+    public List<Student> findByName(String studentName){
+        List<Student> studentsByNameList = new ArrayList<>();
+
+        for (String group : students.keySet()) {
+            List<Student> studentsByGroup = students.get(group);
+              for (Student student : studentsByGroup){
+                  if (student.getName().equals(studentName)) {
+                      studentsByNameList.add(student);
+                  }
+              }
+        }
+        return studentsByNameList;
+    }
+
+    public List<Student> findByNameAlternative(String studentName){
+        List<Student> studentsByNameList = new ArrayList<>();
+        List<Student> allStudents = findAll();
+        for (Student student : allStudents){
+            if (student.getName().equals(studentName)) {
+                studentsByNameList.add(student);
+            }
+        }
+        return studentsByNameList;
+    }
 }

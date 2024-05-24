@@ -22,5 +22,7 @@ public class StudentApp {
         System.out.println("Поиск по группе 43M");
         System.out.println(service.findByGroupName("43M"));
 
+        System.out.println("Поиск студента по имени");
+        System.out.println(service.findByStudentName("Denis"));
     }
 }
