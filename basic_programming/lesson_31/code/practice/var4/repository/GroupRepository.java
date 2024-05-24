@@ -14,8 +14,9 @@ public class GroupRepository {
         this.groups = new ArrayList<>();
     }
 
-    public void addGroup(Group group){
+    public Group addGroup(Group group){
         groups.add(group);
+        return group;
     }
 
     public List<Group> findAll(){

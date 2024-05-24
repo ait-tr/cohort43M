@@ -1,13 +1,17 @@
 package code.practice.var4;
 
 import code.practice.var4.entity.Student;
+import code.practice.var4.repository.GroupRepository;
 import code.practice.var4.repository.StudentRepository;
+import code.practice.var4.service.GroupService;
 import code.practice.var4.service.StudentService;
 
 public class StudentApp {
     public static void main(String[] args) {
         StudentRepository repository = new StudentRepository();
-        StudentService service = new StudentService(repository);
+        GroupRepository groupRepository = new GroupRepository();
+        GroupService groupService = new GroupService(groupRepository);
+        StudentService service = new StudentService(repository,groupService);
 
         Student student1 = service.addNewStudent("Ruslan", "41M");
         Student student2 = service.addNewStudent("Olga", "41M");

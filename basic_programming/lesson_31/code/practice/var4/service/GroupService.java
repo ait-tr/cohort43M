@@ -13,8 +13,8 @@ public class GroupService {
         this.repository = repository;
     }
 
-    public void addNewGroup(String groupId){
-        repository.addGroup(new Group(groupId));
+    public Group addNewGroup(String groupId){
+        return repository.addGroup(new Group(groupId));
     }
 
     public List<Group> findAllGroups(){
@@ -22,6 +22,7 @@ public class GroupService {
     }
 
     public Group findGroupByName(String groupName){
+        //.... валидация данных и тд
         return repository.findByGroupName(groupName);
     }
 
