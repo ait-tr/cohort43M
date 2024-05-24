@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Group {
-    String groupId;
-    List<Student> studentsByGroup;
+    private String groupId;
+    private List<Student> studentsByGroup;
 
     public Group(String groupId) {
         this.groupId = groupId;
