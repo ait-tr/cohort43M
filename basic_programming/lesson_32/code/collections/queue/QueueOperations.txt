@@ -1,0 +1,2 @@
+FIFO - first IN first OUT
+
