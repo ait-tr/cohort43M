@@ -1,15 +1,21 @@
-package Homework_32.task1;
-
-import static Homework_32.task1.BracketValidator.isValid;
+package Homework_32.task2;
 
 public class Demo {
     public static void main(String[] args) {
-        String test1 = "({[]})";
-        String test2 = "({[})";
-        String test3 = "({[]})[]{}";
+        ReversibleTaskList taskList = new ReversibleTaskList();
 
-        System.out.println("Test 1: " + isValid(test1)); // true
-        System.out.println("Test 2: " + isValid(test2)); // false
-        System.out.println("Test 3: " + isValid(test3)); // true
+
+        taskList.addTask("Task 1");
+        taskList.addTask("Task 2");
+        taskList.addTask("Task 3");
+
+
+        taskList.printTasks();
+
+
+        taskList.reverseTasks();
+
+
+        taskList.printTasks();
     }
 }
