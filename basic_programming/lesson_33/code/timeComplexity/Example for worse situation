@@ -1,0 +1,13 @@
+HashMap<String, String> map = new HashMap<>();
+map.put("key1", "value1");
+map.put("key2", "value2");
+
+// Допустим, hashCode для key1 и key2 одинаковый
+// Оба ключа попадут в один и тот же бакет и будут храниться в виде связного списка
+
+
+Bucket 0: null
+Bucket 1: key3 -> value3
+Bucket 2: (key1, value1) -> (key2, value2) -> (key10, value10) -> (key20, value20)
+Bucket 3: null
+...
