@@ -1,4 +1,4 @@
-package code;
+package code.var2;
 
 public class ContactApp {
     public static void main(String[] args) {

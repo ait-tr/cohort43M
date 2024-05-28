@@ -1,4 +1,6 @@
-package code;
+package code.var2;
+
+import code.var1.ContactComparator;
 
 import java.util.*;
 
@@ -6,7 +8,7 @@ public class ContactManager {
     private Set<Contact> contacts;
 
     public ContactManager() {
-        this.contacts = new HashSet<>();
+        this.contacts = new TreeSet<>();
     }
 
     public boolean addContact(Contact contact){
@@ -28,9 +30,7 @@ public class ContactManager {
     }
 
     public void getAllContacts(){
-        TreeSet<Contact> contactsSorted = new TreeSet<>(new ContactComparator());
-        contactsSorted.addAll(contacts);
-        System.out.println(contactsSorted);
+        System.out.println(contacts);
     }
 
     public List<Contact> getContactByName(String name){

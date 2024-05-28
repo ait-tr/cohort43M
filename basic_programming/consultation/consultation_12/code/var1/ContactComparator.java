@@ -1,4 +1,4 @@
-package code;
+package code.var1;
 
 import java.util.Comparator;
 
