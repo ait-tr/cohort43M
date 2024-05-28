@@ -1,7 +1,5 @@
 package code.var2;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Objects;
 
 public class Contact implements Comparable<Contact>{
