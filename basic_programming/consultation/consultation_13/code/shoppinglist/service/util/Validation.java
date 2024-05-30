@@ -1,13 +1,14 @@
 package code.shoppinglist.service.util;
 
-import code.shoppinglist.dto.ProductDto;
+
+import code.shoppinglist.dto.RequestProductDto;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Validation {
 
-    public List<String> validate(ProductDto productDto){
+    public List<String> validate(RequestProductDto productDto){
         List<String> errors = new ArrayList<>();
 
         if (productDto.getProductName().isBlank()) {

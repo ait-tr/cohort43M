@@ -1,7 +1,6 @@
 package code.shoppinglist.service;
 
-import code.library.var1.UserInput;
-import code.shoppinglist.dto.ProductDto;
+import code.shoppinglist.dto.RequestProductDto;
 import code.shoppinglist.dto.ResponseForClientAddProduct;
 import code.shoppinglist.repository.ProductRepository;
 import code.shoppinglist.service.util.Validation;
@@ -18,7 +17,7 @@ public class ProductService {
         this.validation = validation;
     }
 
-    public ResponseForClientAddProduct addNewProduct(ProductDto productDto){
+    public ResponseForClientAddProduct addNewProduct(RequestProductDto productDto){
         /*
         1) отдать данные на проверку - метод Validation
         2) если валидация возвращает НЕ ПУСТОЙ список ошибок -> мы должны
