@@ -1,9 +1,9 @@
-package code.pesponseRequestModel;
+package code.requestResponseModel;
 
 import code.library.var1.UserInput;
-import code.pesponseRequestModel.repository.ProductRepository;
-import code.pesponseRequestModel.service.ProductService;
-import code.pesponseRequestModel.userInterface.UserInterface;
+import code.requestResponseModel.repository.ProductRepository;
+import code.requestResponseModel.service.ProductService;
+import code.requestResponseModel.userInterface.UserInterface;
 
 public class App {
     public static void main(String[] args) {

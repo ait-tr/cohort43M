@@ -1,7 +1,7 @@
-package code.pesponseRequestModel.service;
+package code.requestResponseModel.service;
 
-import code.pesponseRequestModel.entity.Product;
-import code.pesponseRequestModel.repository.ProductRepository;
+import code.requestResponseModel.entity.Product;
+import code.requestResponseModel.repository.ProductRepository;
 
 import java.util.List;
 

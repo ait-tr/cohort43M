@@ -1,8 +1,8 @@
-package code.pesponseRequestModel.userInterface;
+package code.requestResponseModel.userInterface;
 
 import code.library.var1.UserInput;
-import code.pesponseRequestModel.entity.Product;
-import code.pesponseRequestModel.service.ProductService;
+import code.requestResponseModel.entity.Product;
+import code.requestResponseModel.service.ProductService;
 
 import java.util.List;
 

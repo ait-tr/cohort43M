@@ -1,6 +1,6 @@
-package code.pesponseRequestModel.repository;
+package code.requestResponseModel.repository;
 
-import code.pesponseRequestModel.entity.Product;
+import code.requestResponseModel.entity.Product;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package code.pesponseRequestModel.entity;
+package code.requestResponseModelDTO.entity;
 
 public class Product {
 
