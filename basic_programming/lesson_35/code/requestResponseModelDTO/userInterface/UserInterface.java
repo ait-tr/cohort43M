@@ -1,7 +1,7 @@
 package code.requestResponseModelDTO.userInterface;
 
 import code.library.var1.UserInput;
-import code.requestResponseModelDTO.entity.Product;
+import code.requestResponseModelDTO.dto.ProductDto;
 import code.requestResponseModelDTO.service.ProductService;
 
 import java.util.List;
@@ -28,9 +28,13 @@ public class UserInterface {
                     inputNewProduct();
                     break;
                 case 2:
-                    List<Product> products = service.findAll();
-                    for (Product product : products){
-                        System.out.println(product);
+                    List<ProductDto> products = service.findAll();
+                    if (!products.isEmpty()) {
+                        for (ProductDto productDto : products) {
+                            System.out.println(productDto);
+                    }
+                    } else {
+                        System.out.println("Database is empty!");
                     }
                     break;
                 case 3:

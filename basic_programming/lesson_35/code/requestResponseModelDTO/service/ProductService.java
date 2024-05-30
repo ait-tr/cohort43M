@@ -1,8 +1,10 @@
 package code.requestResponseModelDTO.service;
 
+import code.requestResponseModelDTO.dto.ProductDto;
 import code.requestResponseModelDTO.entity.Product;
 import code.requestResponseModelDTO.repository.ProductRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductService {
@@ -30,16 +32,27 @@ public class ProductService {
     }
 
 
-    public List<Product> findAll(){
-        return repository.findAll();
+    public List<ProductDto> findAll(){
+
+        List<ProductDto> productDtoList = new ArrayList<>();
+
+        List<Product> allProducts = repository.findAll();
+
+        for (Product product : allProducts){
+            productDtoList.add(new ProductDto(product.getProductName(), product.getDescription()));
+        }
+
+        return productDtoList;
     }
 
 
-    public Product findById(Integer id){
+    public ProductDto findById(Integer id){
         if (id < 1) {
             return null;
         }
-        return repository.findById(id);
+        Product foundedProduct = repository.findById(id);
+        ProductDto productDtoForReturn = new ProductDto(foundedProduct.getProductName(), foundedProduct.getDescription());
+        return productDtoForReturn;
     }
 //----------------------------------------------------------------------------
     private boolean validationData(Integer id, String productName, Double price, String description) {
