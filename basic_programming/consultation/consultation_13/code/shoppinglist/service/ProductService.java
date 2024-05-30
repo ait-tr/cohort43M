@@ -1,11 +1,13 @@
 package code.shoppinglist.service;
 
-import code.shoppinglist.dto.RequestProductDto;
-import code.shoppinglist.dto.ResponseForClientAddProduct;
+import code.shoppinglist.dto.*;
+import code.shoppinglist.entity.Product;
 import code.shoppinglist.repository.ProductRepository;
 import code.shoppinglist.service.util.Validation;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ProductService {
 
@@ -38,4 +40,41 @@ public class ProductService {
 
         return new ResponseForClientAddProduct(newId, errors);
     }
+
+
+    public ResponseForClientFindByIdProduct findById(Integer id) {
+        Optional<Product> productByIdOptional = repository.findById(id);
+        List<String> errors = new ArrayList<>();
+
+        if (productByIdOptional.isPresent()) {
+            Product productById = productByIdOptional.get();
+            ProductInfoForClient productInfoForClient = new ProductInfoForClient(productById.getProductName(), productById.getDescription());
+            return new ResponseForClientFindByIdProduct(productInfoForClient, errors);
+        } else {
+            errors.add("Product with ID: " + id + " not found");
+            ProductInfoForClient productInfoForClient = new ProductInfoForClient("", "");
+            return new ResponseForClientFindByIdProduct(productInfoForClient, errors);
+        }
+    }
+
+
+    public ResponseForClientFindAllProduct findAll(){
+        List<Product> products = repository.findAll();
+
+        List<String> errors = new ArrayList<>();
+        List<ProductInfoForClient> productInfoForClients = new ArrayList<>();
+
+
+        if (products.isEmpty()) {
+            errors.add("No any records in the database");
+        } else {
+            for (Product product : products){
+                productInfoForClients.add(new ProductInfoForClient(product.getProductName(),product.getDescription()));
+            }
+        }
+
+        return new ResponseForClientFindAllProduct(productInfoForClients, errors);
+
+    }
+
 }
