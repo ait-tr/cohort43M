@@ -1,6 +1,7 @@
 package code.shoppinglist.repository;
 
 import code.shoppinglist.dto.ProductDto;
+import code.shoppinglist.dto.RequestProductDto;
 import code.shoppinglist.entity.Product;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ public class ProductRepositoryArrayList implements ProductRepository{
     }
 
     @Override
-    public Integer addProduct(ProductDto productDto) {
+    public Integer addProduct(RequestProductDto productDto) {
         idCounter++;
         database.add(new Product(idCounter,productDto.getProductName(), productDto.getPrice(),productDto.getDescription()));
         return idCounter;
