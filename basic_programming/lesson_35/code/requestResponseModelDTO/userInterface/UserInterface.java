@@ -45,7 +45,8 @@ public class UserInterface {
     }
 
     private void inputIdForSearch() {
-        System.out.println("Этой опции еще нет");
+        int id = userInput.inputInt("Введите id продукта для поиска :");
+        System.out.println(service.findById(id));
     }
 
     private void inputNewProduct() {

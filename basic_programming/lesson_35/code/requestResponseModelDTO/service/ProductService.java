@@ -35,6 +35,12 @@ public class ProductService {
     }
 
 
+    public Product findById(Integer id){
+        if (id < 1) {
+            return null;
+        }
+        return repository.findById(id);
+    }
 //----------------------------------------------------------------------------
     private boolean validationData(Integer id, String productName, Double price, String description) {
         if (id < 0 || productName.isBlank() || price < 0 || description.isBlank()) {
