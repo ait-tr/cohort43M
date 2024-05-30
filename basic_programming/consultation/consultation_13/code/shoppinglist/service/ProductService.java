@@ -2,18 +2,23 @@ package code.shoppinglist.service;
 
 import code.library.var1.UserInput;
 import code.shoppinglist.dto.ProductDto;
+import code.shoppinglist.dto.ResponseForClientAddProduct;
 import code.shoppinglist.repository.ProductRepository;
+import code.shoppinglist.service.util.Validation;
+
+import java.util.List;
 
 public class ProductService {
 
     private ProductRepository repository;
+    private Validation validation;
 
-    public ProductService(ProductRepository repository) {
+    public ProductService(ProductRepository repository, Validation validation) {
         this.repository = repository;
+        this.validation = validation;
     }
 
-
-    public void addNewProduct(ProductDto productDto){
+    public ResponseForClientAddProduct addNewProduct(ProductDto productDto){
         /*
         1) отдать данные на проверку - метод Validation
         2) если валидация возвращает НЕ ПУСТОЙ список ошибок -> мы должны
@@ -25,6 +30,13 @@ public class ProductService {
         из ответа репозитория и пустой список ошибок
          */
 
-        repository.addProduct(productDto);
+        List<String> errors = validation.validate(productDto);
+        Integer newId = 0;
+
+        if (errors.isEmpty()) {
+            newId = repository.addProduct(productDto);
+        }
+
+        return new ResponseForClientAddProduct(newId, errors);
     }
 }
