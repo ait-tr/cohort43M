@@ -61,6 +61,13 @@ public class ProductService {
         ResponseProductDto productDtoForReturn = new ResponseProductDto(foundedProduct.getId(), foundedProduct.getProductName());
         return productDtoForReturn;
     }
+
+
+    public ResponseProductDto findByProductName(String productName){
+        Product foundedProduct = repository.findByProductName(productName);
+        return new ResponseProductDto(foundedProduct.getId(),foundedProduct.getProductName());
+    }
+
 //----------------------------------------------------------------------------
     private List<String> validationData(RequestCreateProductDto request) {
         List<String> errors = new ArrayList<>();

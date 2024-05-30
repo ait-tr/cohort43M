@@ -36,4 +36,14 @@ public class ProductRepository {
 
         return null;
     }
+
+    public Product findByProductName(String productName){
+        for (Product product : database){
+            if (product.getProductName().equals(productName)){
+                return product;
+            }
+        }
+
+        return null;
+    }
 }

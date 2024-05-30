@@ -44,11 +44,21 @@ public class UserInterface {
                     inputIdForSearch();
                     break;
                 case 4:
+                    inputNameForSearch();
+                    break;
+
+
+                case 0:
                     System.out.println("Работа приложения завершена");
                     return;
             }
         }
 
+    }
+
+    private void inputNameForSearch() {
+        String productName = userInput.inputText("Введите название продукта для поиска:");
+        System.out.println(service.findByProductName(productName));
     }
 
     private void inputIdForSearch() {
@@ -80,7 +90,9 @@ public class UserInterface {
         System.out.println("1. Ввод нового продукта");
         System.out.println("2. Вывод всех продуктов");
         System.out.println("3. Поиск продукта по id");
-        System.out.println("4. Exit");
+        System.out.println("4. Поиск продукта по наименованию");
+
+        System.out.println("0. Exit");
 
     }
 
