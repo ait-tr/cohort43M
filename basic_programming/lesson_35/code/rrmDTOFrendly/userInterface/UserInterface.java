@@ -2,6 +2,7 @@ package code.rrmDTOFrendly.userInterface;
 
 import code.library.var1.UserInput;
 import code.requestResponseModelDTO.entity.Product;
+import code.rrmDTOFrendly.dto.ResponseForClientAddNewProduct;
 import code.rrmDTOFrendly.dto.ResponseProductDto;
 import code.rrmDTOFrendly.dto.RequestCreateProductDto;
 import code.rrmDTOFrendly.service.ProductService;
@@ -62,13 +63,14 @@ public class UserInterface {
 
         RequestCreateProductDto request = new RequestCreateProductDto(productName,price,productDescription);
 
-        ResponseProductDto response = service.addNewProduct(request);
+        ResponseForClientAddNewProduct response = service.addNewProduct(request);
 
-        if (response != null) {
+        if (response.isOk()) {
             System.out.println("Ok");
-            System.out.println(response);
+            System.out.println(response.getResponse());
         } else {
             System.out.println("Error!");
+            System.out.println(response.getErrors());
         }
     }
 

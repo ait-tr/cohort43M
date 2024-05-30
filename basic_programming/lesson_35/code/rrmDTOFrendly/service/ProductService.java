@@ -1,5 +1,6 @@
 package code.rrmDTOFrendly.service;
 
+import code.rrmDTOFrendly.dto.ResponseForClientAddNewProduct;
 import code.rrmDTOFrendly.dto.ResponseProductDto;
 import code.rrmDTOFrendly.dto.RequestCreateProductDto;
 import code.rrmDTOFrendly.entity.Product;
@@ -16,15 +17,16 @@ public class ProductService {
         this.repository = repository;
     }
 
-    public ResponseProductDto addNewProduct(RequestCreateProductDto request) {
+    public ResponseForClientAddNewProduct addNewProduct(RequestCreateProductDto request) {
         /*
          - проверить правильность этих данных
          - создать новый экземпляр класса Product
          - передать этот новый Product в репозиторий на запись
          */
+        List<String> errors = validationData(request);
 
-        if (!validationData(request)) {
-            return null;
+        if (!errors.isEmpty()) {
+            return new ResponseForClientAddNewProduct(false,null,errors);
         }
 
         Product product = createNewProduct(request.getProductName(), request.getPrice(),request.getDescription());
@@ -33,7 +35,7 @@ public class ProductService {
 
         ResponseProductDto response = new ResponseProductDto(savedProduct.getId(), savedProduct.getProductName());
 
-        return response;
+        return new ResponseForClientAddNewProduct(true, response,errors);
     }
 
 
@@ -60,14 +62,22 @@ public class ProductService {
         return productDtoForReturn;
     }
 //----------------------------------------------------------------------------
-    private boolean validationData(RequestCreateProductDto request) {
-        if (request.getProductName().isBlank() ||
-                request.getPrice() < 0 ||
-                request.getDescription().isBlank()) {
-            return false;
-        }
+    private List<String> validationData(RequestCreateProductDto request) {
+        List<String> errors = new ArrayList<>();
 
-        return true;
+        if (request.getProductName().isBlank()) {
+            errors.add("Название продукта не должно быть пустым!");
+        };
+
+        if (request.getPrice() <= 0 ) {
+            errors.add("Цена продукта должна быть больше 0");
+        };
+
+        if (request.getDescription().isBlank()) {
+            errors.add("Описание продукта не должно быть пустым!");
+        };
+
+        return errors;
     }
 
     private Product createNewProduct( String productName, Double price, String description){
