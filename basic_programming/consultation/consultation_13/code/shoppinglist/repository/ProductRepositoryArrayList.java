@@ -1,6 +1,5 @@
 package code.shoppinglist.repository;
 
-import code.shoppinglist.dto.ProductDto;
 import code.shoppinglist.dto.RequestProductDto;
 import code.shoppinglist.entity.Product;
 
