@@ -1,6 +1,6 @@
 package code.generics.generics1.classes;
 
-public class Box<MyType> {
+public class Box <MyType> {
 
    private MyType item;
 
