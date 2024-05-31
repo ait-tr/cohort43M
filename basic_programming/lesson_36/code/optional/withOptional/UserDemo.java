@@ -1,4 +1,4 @@
-package code.optional36.withOutOptional;
+package code.optional.withOptional;
 
 public class UserDemo {
     public static void main(String[] args) {
@@ -14,12 +14,11 @@ public class UserDemo {
 
         User user2 = repo.updateUser(2,"Robert");
 
-        if (user2 != null) {
+        if (!user2.getName().isBlank()) {
             System.out.println(user2);
         } else {
             System.out.println("такого user не найдено");
         }
-
 
 
     }

@@ -1,4 +1,4 @@
-package code.optional36.withOptional;
+package code.optional.withOptional;
 
 public class User {
 
