@@ -1,12 +1,11 @@
 package code.generics.practice.tasks;
 
-class GenericCalculator1<T extends Number> {
+class GenericCalculator1<T extends Number, U extends Number> {
 
 
-    public Double add(T a, T b) {
+    public Double add(T a, U b) {
         return a.doubleValue() + b.doubleValue();
     }
-
 
     public Double subtract(T a, T b) {
         return a.doubleValue() - b.doubleValue();
