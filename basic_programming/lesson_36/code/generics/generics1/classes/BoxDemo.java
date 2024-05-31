@@ -15,9 +15,14 @@ public class BoxDemo {
 
         Box<Plastic> plasticBox = new Box<>();
 
+        Box<Glass> glassBox = new Box<>();
+
+
         paperBox.putItem(new Paper());
         plasticBox.putItem(new Plastic());
 
+        TwoCellBox<Paper, Plastic> paperPlasticTwoCellBox = new TwoCellBox<>();
+        TwoCellBox<Plastic, Glass> plasticGlassTwoCellBox = new TwoCellBox<>();
 
     }
 }
