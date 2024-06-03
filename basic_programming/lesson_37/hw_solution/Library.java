@@ -1,6 +1,10 @@
-package Homework_37.task2;
+package Homework_37.task1;
 
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Library<T extends Book> {
     private Map<String, List<T>> booksByGenre;
@@ -26,14 +30,14 @@ public class Library<T extends Book> {
     }
 
 
-    public Optional<T> findBookByTitle(String title) {
+    public T findBookByTitle(String title) {
         for (List<T> books : booksByGenre.values()) {
             for (T book : books) {
                 if (book.getTitle().equalsIgnoreCase(title)) {
-                    return Optional.of(book);
+                    return book;
                 }
             }
         }
-        return Optional.empty();
+        return null;
     }
 }
