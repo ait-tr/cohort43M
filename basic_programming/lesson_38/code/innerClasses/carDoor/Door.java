@@ -1,4 +1,4 @@
-package code.carDoor;
+package code.innerClasses.carDoor;
 
 public class Door {
     private int length;

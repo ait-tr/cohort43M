@@ -1,4 +1,4 @@
-package code.carDoor;
+package code.innerClasses.carDoor.innerVar;
 
 public class CarDemo {
     public static void main(String[] args) {
@@ -7,6 +7,11 @@ public class CarDemo {
         car.openDoor(2);
         car.closeDoor(2);
         car.closeDoor(2);
+
+        Car.Door[] doors = car.getDoors();
+        for (int i = 0; i < doors.length; i++) {
+            System.out.println(doors[i]);
+        }
 
     }
 }

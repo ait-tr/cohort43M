@@ -1,4 +1,4 @@
-package code.carDoor.innerVar;
+package code.innerClasses.carDoor.innerVar;
 
 public class Car {
     private int numberOfDoors;

@@ -1,4 +1,4 @@
-package code.nonInner;
+package code.innerClasses.nonInner;
 
 public class HandleBar {
 

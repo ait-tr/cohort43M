@@ -1,8 +1,8 @@
-package code.innerClass;
+package code.innerClasses.innerClass;
 
-import code.nonInner.Bicycle;
-import code.nonInner.HandleBar;
-import code.nonInner.Seat;
+import code.innerClasses.nonInner.Bicycle;
+import code.innerClasses.nonInner.HandleBar;
+import code.innerClasses.nonInner.Seat;
 
 public class BicycleInnerClassDemo {
     public static void main(String[] args) {

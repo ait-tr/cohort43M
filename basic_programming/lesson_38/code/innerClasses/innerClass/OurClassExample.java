@@ -1,4 +1,4 @@
-package code.innerClass;
+package code.innerClasses.innerClass;
 
 public class OurClassExample {
     // ......
