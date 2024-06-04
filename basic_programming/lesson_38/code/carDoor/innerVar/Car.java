@@ -32,7 +32,6 @@ public class Car {
         }
     }
 
-
     public class Door {
         private int length;
         private int height;
