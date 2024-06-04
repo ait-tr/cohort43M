@@ -16,4 +16,9 @@ public interface InMemoryRepository {
 
     // List - потому что name не уникальный и результатов поиска может быть несколько
     public List<Task> findByName(String name);
+
+    public boolean delete(Integer id);
+
+    public boolean delete(Task task);
+
 }
