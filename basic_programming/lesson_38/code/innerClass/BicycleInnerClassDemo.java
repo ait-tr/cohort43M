@@ -6,7 +6,7 @@ import code.nonInner.Seat;
 
 public class BicycleInnerClassDemo {
     public static void main(String[] args) {
-      BicycleInnerClass myBicycle = new BicycleInnerClass("Super1", 3);
+      BicycleInnerClass myBicycle = new BicycleInnerClass("Super1", 3,40);
 
       BicycleInnerClass.HandelBar handelBarInner = myBicycle.new HandelBar(true);
       BicycleInnerClass.Seat seatInner = myBicycle.new Seat();
@@ -17,6 +17,8 @@ public class BicycleInnerClassDemo {
         System.out.println(myBicycle);
         System.out.println(handelBarInner);
         System.out.println(seatInner);
+
+        seatInner.getSeatParam();
 
     }
 }

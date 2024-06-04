@@ -4,12 +4,13 @@ public class BicycleInnerClass {
 
     private String model;
     private int weight;
-    private int seatDiameter;
+    private static int seatDiameter;
 
 
-    public BicycleInnerClass(String model, int weight) {
+    public BicycleInnerClass(String model, int weight, int seatDiameter) {
         this.model = model;
         this.weight = weight;
+        this.seatDiameter = seatDiameter;
     }
 
     public void start(){
@@ -38,12 +39,11 @@ public class BicycleInnerClass {
             System.out.println("Сиденье поднято вверх");
         }
 
-
         public void down(){
             System.out.println("Сиденье опущено вниз");
         }
 
-        public void getSeatParam(){
+        public static void getSeatParam(){
             System.out.println("Параметры сиденья: " + seatDiameter);
         }
 
