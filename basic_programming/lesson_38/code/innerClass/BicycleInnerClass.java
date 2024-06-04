@@ -4,7 +4,7 @@ public class BicycleInnerClass {
 
     private String model;
     private int weight;
-    private static int seatDiameter;
+    private int seatDiameter;
 
 
     public BicycleInnerClass(String model, int weight, int seatDiameter) {
@@ -15,6 +15,10 @@ public class BicycleInnerClass {
 
     public void start(){
         System.out.println("Поехали!");
+    }
+
+    public void createNewSeat(){
+        Seat seat = new Seat();
     }
 
    public class HandelBar {
@@ -43,7 +47,7 @@ public class BicycleInnerClass {
             System.out.println("Сиденье опущено вниз");
         }
 
-        public static void getSeatParam(){
+        public void getSeatParam(){
             System.out.println("Параметры сиденья: " + seatDiameter);
         }
 
