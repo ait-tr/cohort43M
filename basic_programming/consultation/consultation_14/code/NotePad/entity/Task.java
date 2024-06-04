@@ -1,4 +1,4 @@
-package consultation_13.code.NotePad.entity;
+package code.NotePad.entity;
 
 public class Task {
     private Integer id;

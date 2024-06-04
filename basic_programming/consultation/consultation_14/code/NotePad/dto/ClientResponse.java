@@ -1,4 +1,4 @@
-package consultation_13.code.NotePad.dto;
+package code.NotePad.dto;
 
 import java.util.List;
 

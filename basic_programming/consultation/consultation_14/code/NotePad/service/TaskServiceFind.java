@@ -1,8 +1,8 @@
-package consultation_13.code.NotePad.service;
+package code.NotePad.service;
 
 import consultation_13.code.NotePad.dto.ClientResponse;
 import consultation_13.code.NotePad.entity.Task;
-import consultation_13.code.NotePad.repository.InMemoryRepository;
+import code.NotePad.repository.InMemoryRepository;
 
 import java.util.List;
 import java.util.Optional;

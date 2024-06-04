@@ -1,4 +1,4 @@
-package consultation_13.code;
+package code;
 
 public class NoteBookConstructorDemo {
     public static void main(String[] args) {

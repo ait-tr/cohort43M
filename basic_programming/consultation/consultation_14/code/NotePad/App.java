@@ -1,7 +1,7 @@
-package consultation_13.code.NotePad;
+package code.NotePad;
 
-import consultation_13.code.NotePad.repository.InMemoryRepository;
-import consultation_13.code.NotePad.repository.TaskMemoryRepository;
+import code.NotePad.repository.InMemoryRepository;
+import code.NotePad.repository.TaskMemoryRepository;
 import consultation_13.code.NotePad.service.TaskServiceAdd;
 import consultation_13.code.NotePad.service.TaskServiceFind;
 import consultation_13.code.NotePad.service.validation.ValidationService;

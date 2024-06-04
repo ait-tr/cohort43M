@@ -1,9 +1,9 @@
-package consultation_13.code.NotePad.ui;
+package code.NotePad.ui;
 
-import consultation_13.code.NotePad.dto.ClientRequest;
-import consultation_13.code.NotePad.dto.ClientResponse;
-import consultation_13.code.NotePad.service.TaskServiceAdd;
-import consultation_13.code.NotePad.service.TaskServiceFind;
+import code.NotePad.dto.ClientRequest;
+import code.NotePad.dto.ClientResponse;
+import code.NotePad.service.TaskServiceAdd;
+import code.NotePad.service.TaskServiceFind;
 
 public class UserMenu {
     private final TaskServiceAdd serviceAdd;

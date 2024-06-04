@@ -1,4 +1,4 @@
-package consultation_13.code.NotePad.service.validation;
+package code.NotePad.service.validation;
 
 import consultation_13.code.NotePad.dto.ClientRequest;
 

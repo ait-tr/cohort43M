@@ -1,4 +1,4 @@
-package consultation_13.code.NotePad.repository;
+package code.NotePad.repository;
 
 import consultation_13.code.NotePad.entity.Task;
 
