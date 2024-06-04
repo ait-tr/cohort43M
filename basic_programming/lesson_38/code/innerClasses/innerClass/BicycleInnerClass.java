@@ -4,7 +4,7 @@ public class BicycleInnerClass {
 
     private String model;
     private int weight;
-    private int seatDiameter;
+    private static int seatDiameter;
 
 
     public BicycleInnerClass(String model, int weight, int seatDiameter) {
@@ -47,7 +47,7 @@ public class BicycleInnerClass {
             System.out.println("Сиденье опущено вниз");
         }
 
-        public void getSeatParam(){
+        public static void getSeatParam(){
             System.out.println("Параметры сиденья: " + seatDiameter);
         }
 
