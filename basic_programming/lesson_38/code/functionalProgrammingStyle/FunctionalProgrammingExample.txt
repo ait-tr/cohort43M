@@ -51,7 +51,11 @@ newStudents = changeGPAs(students)
 
 newStudents.map(students => changeGPAs(students)) - получили новые данные
 
+------ у нас есть два массива и мы можем использовать оба - и старый и новый ------
+
+
 students.map(students => changeGPAs(students)) - перезаписали данные
+
 ---------------
 
 function changeGPAs(students) {
