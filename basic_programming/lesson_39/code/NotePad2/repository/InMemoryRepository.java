@@ -1,7 +1,7 @@
-package code.NotePad.repository;
+package code.NotePad2.repository;
 
 
-import code.NotePad.entity.Task;
+import code.NotePad2.entity.Task;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,11 +1,10 @@
-package code.NotePad;
+package code.NotePad2;
 
 import code.NotePad2.repository.InMemoryRepository;
 import code.NotePad2.repository.TaskMemoryRepository;
-import consultation_13.code.NotePad.service.TaskServiceAdd;
-import consultation_13.code.NotePad.service.TaskServiceFind;
-import consultation_13.code.NotePad.service.validation.ValidationService;
-import consultation_13.code.NotePad.ui.UserMenu;
+import code.NotePad2.service.*;
+import code.NotePad2.service.validation.ValidationService;
+import code.NotePad2.ui.UserMenu;
 
 public class App {
     public static void main(String[] args) {
@@ -15,10 +14,12 @@ public class App {
 
         TaskServiceAdd taskServiceAdd = new TaskServiceAdd(repository,validationService);
         TaskServiceFind taskServiceFind = new TaskServiceFind(repository);
+        TaskServiceDelete taskServiceDelete = new TaskServiceDelete(repository);
 
-        UserMenu userMenu = new UserMenu(taskServiceAdd,taskServiceFind);
+        UserMenu userMenu = new UserMenu(taskServiceAdd,taskServiceFind,taskServiceDelete);
 
         userMenu.menu();
+
 
     }
 }

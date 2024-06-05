@@ -1,10 +1,11 @@
-package code.NotePad.service;
+package code.NotePad2.service;
 
-import consultation_13.code.NotePad.dto.ClientRequest;
-import consultation_13.code.NotePad.dto.ClientResponse;
-import consultation_13.code.NotePad.entity.Task;
+
+import code.NotePad2.dto.ClientRequest;
+import code.NotePad2.dto.ClientResponse;
+import code.NotePad2.entity.Task;
 import code.NotePad2.repository.InMemoryRepository;
-import consultation_13.code.NotePad.service.validation.ValidationService;
+import code.NotePad2.service.validation.ValidationService;
 
 import java.util.List;
 
@@ -12,13 +13,15 @@ public class TaskServiceAdd {
 
     private final InMemoryRepository repository;
     private final ValidationService validation;
+    UserInput ui = new UserInput();
 
     public TaskServiceAdd(InMemoryRepository repository, ValidationService validation) {
         this.repository = repository;
         this.validation = validation;
     }
 
-    public ClientResponse<Task> add(ClientRequest request){
+    public ClientResponse<Task> add(){
+        ClientRequest request = inputNewTask();
         List<String> errors = validation.checkRequest(request);
 
         if (errors.isEmpty()) {
@@ -28,5 +31,11 @@ public class TaskServiceAdd {
         } else {
             return new ClientResponse<>(400, new Task(), errors);
         }
+    }
+    public ClientRequest inputNewTask(){
+        String name = ui.inputText("Enter task name:");
+        String description = ui.inputText("Enter task description:");
+
+        return new ClientRequest(name, description);
     }
 }
