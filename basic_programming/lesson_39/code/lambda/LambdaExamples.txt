@@ -1,0 +1,23 @@
+
+Примеры лямбда-выражений
+
+Пример 1
+
+() -> Math.PI
+() -> 3.1415
+
+Пример 2
+
+(int a, int b) -> a*b
+
+Пример 3
+(double a, double b, double c) -> {
+if ((a + b) < c || (a + c) < b || (b + c) < a)
+return 0.0;
+else
+{
+double halfPerimeter = (a + b + c) / 2;
+double square = Math.sqrt(halfPerimeter * (halfPerimeter - a) * (halfPerimeter - b) * (halfPerimeter - c));
+return square;
+}
+}
