@@ -1,0 +1,10 @@
+ strings.forEach(element -> System.out.println(element));
+
+ равноценно:
+
+  strings.forEach(System.out::println);
+
+  x -> объект.метод(x) то мы можем заменить на такую форму записи объект::метод
+
+
+
