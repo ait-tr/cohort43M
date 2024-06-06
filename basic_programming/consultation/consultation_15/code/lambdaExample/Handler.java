@@ -11,11 +11,35 @@ public class Handler implements Function<Request, String> {
 
     public Handler() {
         this.responses = new LinkedHashMap<>();
-        responses.put(code -> code >= 100 && code < 200, "Запрос получен");
-        responses.put(code -> code >= 200 && code < 300, "Ок");
-        responses.put(code -> code >= 300 && code < 400, "Сервисный запрос");
+
+        Predicate<Integer> predicate1 = new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer code) {
+                return code >= 100 && code < 200;
+            }
+        };
+
+        Predicate<Integer> predicate2 = new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer code) {
+                return code >= 200 && code < 300;
+            }
+        };
+
+        Predicate<Integer> predicate3 = new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer code) {
+                return code >= 300 && code < 400;
+            }
+        };
+
+        responses.put(predicate1, "Запрос получен");
+        responses.put(predicate2, "Ок");
+        responses.put(predicate3, "Сервисный запрос");
         responses.put(code -> code >= 400 && code < 500, "Ошибка пользователя");
         responses.put(code -> code >= 500 && code <= 550, "Ошибка сервера");
+
+        System.out.println(responses);
 
     }
 
