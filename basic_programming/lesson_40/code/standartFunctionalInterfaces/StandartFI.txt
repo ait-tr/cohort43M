@@ -1,0 +1,56 @@
+Predicate<T>
+Consumer<T>
+Function<T,R>
+Supplier<T>
+UnaryOperator<T>
+BinaryOperator<T>
+
+1. Predicate<T>
+public interface Predicate<T> {
+boolean test(T t);
+}
+
+ФИ проверяет соблюдение некоторого условия
+если оно соблюдается, то метод test возвращает значение true
+В качестве параметра лямбда-выражение принимает объект типа Т
+
+2. Consumer<T>
+
+public interface Consumer<T> {
+void accept(T t);
+}
+
+ФИ используется когда НЕ НУЖНО возвращать результат как результат работы метода
+
+
+3. Function<T,R> - используется когда надо выполнить операцию и получить результат ДРУГОГО типа
+
+public interface Function<T,R> {
+R apply(T t);
+}
+
+4. Supplier<T> - используется для получения результата, НО когда нет ничего для передачи в качестве параметра
+
+public interface Supplier<T> {
+T get();
+}
+
+
+5. UnaryOperator<T> - используется когда вход и выход одного типа
+
+public interface UnaryOperator<T> {
+T apply(T t);
+}
+
+
+6. BinaryOperator<T> - используется когда оба аргумента на входе и результат одного типа данных
+
+public interface BinaryOperator<T> {
+T apply(T t1, T t2);
+}
+
+Bi-Function
+Bi-Consumer
+Bi-Predicate - интерфейсы которым для работы нужно передать два параметра
+
+
