@@ -1,4 +1,4 @@
-package code.practice;
+package code.practice.task1;
 
 import java.util.Arrays;
 import java.util.List;
