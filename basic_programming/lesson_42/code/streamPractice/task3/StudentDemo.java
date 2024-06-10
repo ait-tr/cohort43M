@@ -1,5 +1,6 @@
 package code.streamPractice.task3;
 
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,7 +17,6 @@ public class StudentDemo {
         student2.addBook("HTML introducing");
         student2.addBook("Effective Java");
 
-
         List<Student> students = Arrays.asList(student1,student2);
 
         List<String> bookNames = students.stream()
@@ -26,6 +26,12 @@ public class StudentDemo {
                 .toList();
 
         System.out.println(bookNames);
+
+        List<String> noHtmlBooks = bookNames.stream()
+                .filter(bookName -> !bookName.contains("HTML"))
+                .toList();
+
+        System.out.println(noHtmlBooks);
 
     }
 }
