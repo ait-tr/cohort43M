@@ -12,12 +12,10 @@ public class ProductService {
     }
 
     public List<String> add(Product product){
-        List<String> validationResult = validationService.validate(product);
 
-        if (validationResult.isEmpty()) {
-            return Arrays.asList("Success add new product");
-        } else {
-            return validationResult;
-        }
+        validationService.validate(product);
+
+        return Arrays.asList("Success add new product");
+
     }
 }

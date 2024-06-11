@@ -14,7 +14,7 @@ public class ValidationService {
     - цена продукта должна быть > 0
      */
 
-    public List<String> validate(Product product){
+    public void validate(Product product){
         List<String> errorMessages = new ArrayList<>();
 
         if (product == null) {
@@ -46,6 +46,13 @@ public class ValidationService {
             }
 
         }
-        return errorMessages;
+
+        if (!errorMessages.isEmpty()) {
+            String allMessages = errorMessages.stream()
+                    .reduce((finalMessage, currentMessage) -> (finalMessage + "\n" + currentMessage))
+                    .get();
+
+            throw new ProductValidationException(allMessages);
+        }
     }
 }
