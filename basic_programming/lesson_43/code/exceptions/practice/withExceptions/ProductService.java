@@ -1,4 +1,4 @@
-package code.exceptions.practice;
+package code.exceptions.practice.withExceptions;
 
 import java.util.Arrays;
 import java.util.List;

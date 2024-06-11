@@ -1,4 +1,4 @@
-package code.exceptions.practice;
+package code.exceptions.practice.withExceptions;
 
 public class Product {
     private String name;

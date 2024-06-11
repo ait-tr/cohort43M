@@ -1,4 +1,4 @@
-package code.exceptions.practice;
+package code.exceptions.practice.classicWay;
 
 import code.library.var1.UserInput;
 
