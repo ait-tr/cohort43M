@@ -1,9 +1,8 @@
 package code.products;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class ProductDemo {
     public static void main(String[] args) {
@@ -86,6 +85,43 @@ public class ProductDemo {
 
 
 
+        avgPrices.clear();
+
+        avgPrices = products.stream()
+                // отфильтровать продукты у которых количество больше чем критерий
+                .filter(product -> product.getQuantity() > quantityLimit)
+                .collect(
+                        Collectors.groupingBy(
+                                product -> product.getCategory(),
+                                Collectors.averagingDouble(product -> product.getPrice())
+                        )
+                );
+
+        printAvg(avgPrices);
+
+
+        Map<String, List<String>> productsByStream = products.stream()
+                .filter(product -> product.getQuantity() > quantityLimit)
+                .collect(
+                        Collectors.groupingBy(
+                                product -> product.getCategory(),
+                                Collectors.mapping(
+                                        product -> product.getName(), Collectors.toList())
+                        )
+                );
+
+        System.out.println(productsByStream);
+
+
+        Map<String, List<Product>> categoryProductsByStream = products.stream()
+                .filter(product -> product.getQuantity() > quantityLimit)
+                .collect(
+                        Collectors.groupingBy(
+                                product -> product.getCategory()
+                        )
+                );
+
+        System.out.println(categoryProductsByStream);
     }
 
 
