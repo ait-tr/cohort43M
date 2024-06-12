@@ -7,7 +7,6 @@ public class WriteAndReadBuffer {
         String path = "basic_programming/lesson_44/code/resources/fileWriteBufferedDemo.txt";
         writeBufferFile(path);
         readBufferFile(path);
-
     }
 
     public static void writeBufferFile(String path) throws IOException {
@@ -19,7 +18,6 @@ public class WriteAndReadBuffer {
         bufferedWriter.newLine();
         bufferedWriter.write("Все отлично!");
         bufferedWriter.close();
-
     }
 
     public static void readBufferFile(String path) throws IOException {
@@ -37,6 +35,5 @@ public class WriteAndReadBuffer {
 
         bufferedReader.close();
         bufferedWriter.close();
-
     }
 }
