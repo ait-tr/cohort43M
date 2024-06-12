@@ -24,8 +24,11 @@ public class FileCopyExample {
           readByte = inputStream.read();
       }
 
+      //outputStream.flush(); - принудительно записать все что осталось в буфере в файл
+
       inputStream.close();
       outputStream.close();
+
     }
 
 }
