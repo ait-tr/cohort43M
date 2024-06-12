@@ -8,7 +8,6 @@ public class FileWriterAndReader {
     public static void main(String[] args) throws IOException {
         writeText("basic_programming/lesson_44/code/resources/fileWriteDemo.txt","Привет! Как дела?");
         readText("basic_programming/lesson_44/code/resources/fileWriteDemo.txt");
-
     }
 
     public static void writeText(String path, String text) throws IOException {
