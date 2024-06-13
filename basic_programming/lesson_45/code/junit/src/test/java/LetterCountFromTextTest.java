@@ -1,9 +1,9 @@
-package code.junit.simpleTest;
+package code.junit.src.test.java;
 
-
+import code.junit.src.main.java.LetterCountFromText;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class LetterCountFromTextTest {
 

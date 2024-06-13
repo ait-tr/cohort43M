@@ -1,4 +1,4 @@
-package code.junit.simpleTest;
+package code.junit.src.main.java;
 
 public class LetterCountFromText {
 
