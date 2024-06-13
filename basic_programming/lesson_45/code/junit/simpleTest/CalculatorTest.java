@@ -1,34 +1,23 @@
 package code.junit.simpleTest;
 
-public class CalculatorTest {
+import org.junit.jupiter.api.Test;
 
-    public static void main(String[] args) {
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+class CalculatorTest {
+
+    @Test
+    void testSum(){
         Calculator calculator = new Calculator();
+        int x = 10;
+        int y = 15;
 
-        int x = 5;
-        int y = 10;
+        int expectedResult = 25;
 
-        int expectedResult = 15;
         int actualResult = calculator.sum(x,y);
 
-        if (expectedResult == actualResult){
-            System.out.println("Test method sum() is OK!");
-        } else {
-            System.out.println("Test method sum() is FAIL!");
-            System.out.println("Expected: " + expectedResult + ", but received " + actualResult);
-        }
-
-
-        expectedResult =50;
-        actualResult = calculator.multiplication(x,y);
-
-        if (expectedResult == actualResult){
-            System.out.println("Test method multiplication() is OK!");
-        } else {
-            System.out.println("Test method multiplication() is FAIL!");
-            System.out.println("Expected: " + expectedResult + ", but received " + actualResult);
-        }
+        assertEquals(expectedResult,actualResult);
 
     }
+
 }
