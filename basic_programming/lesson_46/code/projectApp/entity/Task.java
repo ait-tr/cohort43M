@@ -9,6 +9,8 @@ public class Task {
         this.taskName = taskName;
         this.taskDescription = taskDescription;
     }
+    public Task( ) {
+    }
 
     public Task(Integer id, String taskName, String taskDescription) {
         this.id = id;
