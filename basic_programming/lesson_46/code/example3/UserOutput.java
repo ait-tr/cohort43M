@@ -1,4 +1,4 @@
-package code.example2;
+package code.example3;
 
 public class UserOutput {
     public void printData(int result) {

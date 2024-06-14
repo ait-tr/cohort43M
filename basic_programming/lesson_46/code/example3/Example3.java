@@ -1,4 +1,4 @@
-package code.example2;
+package code.example3;
 
 import code.library.var1.UserInput;
 
