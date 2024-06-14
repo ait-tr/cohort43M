@@ -50,7 +50,7 @@ public class TaskServiceFind {
         if (foundedTaskOptional.isPresent()){
             return new ClientResponse<>(200, foundedTaskOptional.get(), "Найденный элемент");
         } else {
-            return new ClientResponse<>(400, new Task(),"Элемент с name = " + name + " не найден");
+            return new ClientResponse<>(400, new Task(),"Элемент с name = " + name.getFindParam() + " не найден");
         }
     }
 }
