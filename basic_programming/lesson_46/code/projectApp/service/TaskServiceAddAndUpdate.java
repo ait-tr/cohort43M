@@ -3,14 +3,15 @@ package code.projectApp.service;
 import code.projectApp.dto.ClientRequest;
 import code.projectApp.dto.ClientResponse;
 import code.projectApp.entity.Task;
+import code.projectApp.repository.InMemoryRepository;
 import code.projectApp.repository.TaskInMemoryRepository;
 import code.projectApp.service.validation.Validation;
 
 public class TaskServiceAddAndUpdate {
-    private final TaskInMemoryRepository repository;
+    private final InMemoryRepository repository;
     private final Validation validation;
 
-    public TaskServiceAddAndUpdate(TaskInMemoryRepository repository, Validation validation) {
+    public TaskServiceAddAndUpdate(InMemoryRepository repository, Validation validation) {
         this.repository = repository;
         this.validation = validation;
     }
