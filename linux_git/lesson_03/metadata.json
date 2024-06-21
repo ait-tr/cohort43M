@@ -3,9 +3,9 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "./code/commands.md",
-    "./code/.gitignore",
-    "./code/index.html"
+    "code/commands.md",
+    "code/.gitignore",
+    "code/index.html"
   ],
   "video": "",
   "etc": ""
