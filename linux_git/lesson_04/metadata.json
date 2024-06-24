@@ -3,8 +3,8 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/commands.md",
     "code/task.md",
-    "code/notes.md",
     "code/index.html"
   ],
   "video": "",
