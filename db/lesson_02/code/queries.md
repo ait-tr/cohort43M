@@ -1,6 +1,4 @@
-Зарегистрировались в https://drawsql.app
-
-## Диаграммf с занятия:
+## Диаграммы с занятия:
 
 - https://drawsql.app/teams/ait-16/diagrams/lesson-2
 
