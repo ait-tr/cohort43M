@@ -7,28 +7,28 @@ use('students_43_db');
 // коллекция - это аналог таблиц в postgres
 // id это уникальный сгенерированный хэш код
 
-// * db.users.insertOne({name: 'Dmitrii'})
+db.users.insertOne({name: 'Dmitrii'})
 
 // чтобы передать несколько значений мы передаем массив в insertMany
 
-// db.users.insertMany([
-//   {name:'Anna', hobbies: ['swimming', 'programming', 'management']},
-//   {name: 'Lubov', hobbies: ['sewing', 'jym', 'walking']}
-// ])
+db.users.insertMany([
+  {name:'Anna', hobbies: ['swimming', 'programming', 'management']},
+  {name: 'Lubov', hobbies: ['sewing', 'jym', 'walking']}
+])
 
 // вывести все элементы в коллекции
 
-// * db.users.find()
+db.users.find()
 
 // вывести первые два элемента c помощью метода limit)()
 
-// * db.users.find().limit(2)
+db.users.find().limit(2)
 
 // вывод данных с сортировкой: в функцию sort() мы передаем объект - алгоритм сортировки
 // в объекте указываем ключ по которому будем сортировать и значение:
 // 1 - по алфавиту, -1 - обратно
 
-// * db.users.find().sort({name: -1})
+db.users.find().sort({name: -1})
 
 // поиск по определенному параметру
 // указывайте в круглых скобках объект с параметрами поиска - например ключ и значение
@@ -36,19 +36,19 @@ use('students_43_db');
 // если вы находите элемент по хеш ключу - вам в значении нужно использовать вызов функции
 // ObjectId() в который вы передаете строковое значение
 
-// * db.users.find({_id: ObjectId('6682792148c0fe9d50594057')})
+db.users.find({_id: ObjectId('6682792148c0fe9d50594057')})
 
 // для того чтобы обновить данные мы используем updateOne / updateMany
 // два объекта на вход в функцию - первый это параметр для поиска
 // второй объект - с оператором $set и значением в виде объекта
 
-// db.users.updateOne(
-//   {_id: ObjectId('6682775596ba914cf18513bb')},
-//   {$set: {age: 30}});
+db.users.updateOne(
+  {_id: ObjectId('6682775596ba914cf18513bb')},
+  {$set: {age: 30}});
 
-// db.users.updateOne(
-//   {name: 'Anna'},
-//   {$set: {age: 35}});
+db.users.updateOne(
+  {name: 'Anna'},
+  {$set: {age: 35}});
 
 // поиск по определенному условию для чисел:
 //через операторы
@@ -59,11 +59,11 @@ use('students_43_db');
 
 // найти все элементы по условию - ответ придет в массиве
 
-// db.users.find({age: {$eq: 33}})
+db.users.find({age: {$eq: 33}})
 
 // тот же пример, но запись короче
 
-// db.users.find({age: 33});
+db.users.find({age: 33});
 
 // находит только первый элемент удовлетворяющий условию поиска
 
